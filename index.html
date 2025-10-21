@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SITE 1101 · Principles of Information Systems</title>
+    <meta
+      name="description"
+      content="SITE 1101: Principles of Information Systems — ADA University, Fall 2025"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;750&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="#top" id="top" aria-label="SITE 1101 Home">
+          <span class="logo">🧠</span>
+          <span class="title">SITE 1101</span>
+          <span class="subtitle">Principles of Information Systems</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#announcements">Announcements</a>
+          <a href="#office-hours">TA Hours</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#assessment">Assessment</a>
+          <a href="#contacts">Contacts</a>
+          <a href="#deadlines">Deadlines</a>
+          <a href="#exams">Exams</a>
+          <a href="#outline">Outline</a>
+          <a href="#policies">Policies</a>
+          <a href="#tech">Tech</a>
+          <a href="#notes">Notes</a>
+          <button id="themeToggle" class="ghost" aria-label="Toggle theme">
+            ◐
+          </button>
+          <button
+            id="adminToggle"
+            class="ghost admin-toggle"
+            aria-label="Toggle admin"
+          >
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap content">
+      <section class="hero">
+        <h1>📘 SITE 1101: Principles of Information Systems</h1>
+        <p class="lead">
+          Foundational overview of information technology and computer-based
+          systems — hardware, software, networks, databases, AI, systems
+          analysis &amp; design, and programming — for SITE students at
+          <a href="https://www.ada.edu.az/" target="_blank" rel="noopener"
+            >ADA University</a
+          >.
+        </p>
+        <ul class="meta">
+          <li><strong>Term:</strong> Fall 2025</li>
+          <li><strong>Instructor:</strong> Mr Ismayil Shahaliyev</li>
+        </ul>
+      </section>
+
+      <section id="announcements" class="card">
+        <h2>📣 Announcements</h2>
+        <div class="note">
+          This page will be used for quick tips, updates and announcements.
+        </div>
+        <ul class="anno" id="annoList">
+          <li>
+            <span class="tag">Info</span>TA office hours will resume as usual
+            from <strong>October 20</strong>. See the schedule below.
+          </li>
+          <li>
+            <span class="tag">Update</span>Syllabus will be updated to
+            <strong>version 1</strong>. Note that the instructor office is
+            updated to <strong>B320</strong>.
+          </li>
+          <li>
+            <span class="tag warn">Reminder</span>Your first project is due on
+            <strong>October 20, 23:00</strong>.
+          </li>
+          <li>
+            <span class="tag tip">Tip</span>Participation is
+            <strong>10%</strong> of your grade — come prepared to discuss and
+            contribute actively.
+          </li>
+          <li>
+            <span class="tag tip">Tip</span>Verify facts when using GenAI (e.g.,
+            ChatGPT). Class + reading + discussion = exam readiness.
+          </li>
+        </ul>
+      </section>
+
+      <section id="office-hours" class="card">
+        <h2>
+          🧑‍🏫 Teaching Assistant Office Hours
+          <span class="tools admin-only">
+            <button class="edit-btn" data-target="taTable">✎ Edit</button>
+            <button class="mini-btn" data-add="ta">＋ Row</button>
+            <button class="mini-btn danger" data-reset="ta">Reset</button>
+          </span>
+        </h2>
+        <div class="table-scroll">
+          <table id="taTable">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Room</th>
+                <th class="admin-only">—</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="schedule" class="card">
+        <h2>
+          🗓️ Weekly Schedule
+          <span class="tools admin-only">
+            <button class="edit-btn" data-target="schedBody">✎ Edit</button>
+            <button class="mini-btn" data-add="sched">＋ Row</button>
+            <button class="mini-btn danger" data-reset="sched">Reset</button>
+          </span>
+        </h2>
+        <p class="muted">
+          Check the Academic Calendar for university-wide updates.
+        </p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Room</th>
+                <th>Notes</th>
+                <th class="admin-only">—</th>
+              </tr>
+            </thead>
+            <tbody id="schedBody">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="assessment" class="card">
+        <h2>🧮 Assessment Breakdown</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Item</th>
+                <th>Info</th>
+                <th>Weight (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Individual</td>
+                <td>Participation</td>
+                <td>
+                  Attend lectures and contribute meaningfully to discussions.
+                </td>
+                <td class="w">10</td>
+              </tr>
+              <tr>
+                <td>Individual</td>
+                <td>Homework</td>
+                <td>Logic gates and programming fundamentals.</td>
+                <td class="w">5</td>
+              </tr>
+              <tr>
+                <td>Team</td>
+                <td>Project</td>
+                <td>
+                  Construct basic logic gates using transistors and components.
+                </td>
+                <td class="w">15</td>
+              </tr>
+              <tr>
+                <td>Team</td>
+                <td>Project</td>
+                <td>
+                  Organize an
+                  <a
+                    href="https://hourofcode.com/"
+                    target="_blank"
+                    rel="noopener"
+                    >Hour of Code</a
+                  >
+                  event and teach coding.
+                </td>
+                <td class="w">15</td>
+              </tr>
+              <tr>
+                <td>Individual</td>
+                <td>Project</td>
+                <td>
+                  Design a personal portfolio website and host it on GitHub.
+                </td>
+                <td class="w">15</td>
+              </tr>
+              <tr>
+                <td>Individual</td>
+                <td>Exam [Midterm]</td>
+                <td>Knowledge gained in the first half of the semester.</td>
+                <td class="w">20</td>
+              </tr>
+              <tr>
+                <td>Individual</td>
+                <td>Exam [Final]</td>
+                <td>Knowledge gained throughout the semester.</td>
+                <td class="w">20</td>
+              </tr>
+              <tr class="total">
+                <td colspan="3"><strong>Total</strong></td>
+                <td class="w"><strong>100</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="contacts" class="card">
+        <h2>👥 Contacts</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Office/Program</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mr. Ismayil Shahaliyev</td>
+                <td>
+                  <a href="mailto:ishahaliyev@ada.edu.az"
+                    >ishahaliyev@ada.edu.az</a
+                  >
+                </td>
+                <td>B320</td>
+              </tr>
+              <tr>
+                <td>Ms. Rumiyya Alili</td>
+                <td>
+                  <a href="mailto:ralili@ada.edu.az">ralili@ada.edu.az</a>
+                </td>
+                <td>TBA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 14px">Academic Advisors</h3>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Program</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ms. Turkan Huseynova</td>
+                <td>
+                  <a href="mailto:thuseynova@ada.edu.az"
+                    >thuseynova@ada.edu.az</a
+                  >
+                </td>
+                <td>BSCS</td>
+              </tr>
+              <tr>
+                <td>Ms. Kamala Hashimova</td>
+                <td>
+                  <a href="mailto:khashimova@ada.edu.az"
+                    >khashimova@ada.edu.az</a
+                  >
+                </td>
+                <td>BSIT &amp; BSMATH</td>
+              </tr>
+              <tr>
+                <td>TBA</td>
+                <td>TBA</td>
+                <td>BSCE &amp; BSEEE</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          Communication rules and office details are as announced on Blackboard.
+        </p>
+      </section>
+
+      <section id="deadlines" class="card">
+        <h2>⏱️ Deadline Policy</h2>
+        <ul class="checklist">
+          <li>
+            <strong>No extensions.</strong> Plan for upload size and
+            connectivity.
+          </li>
+          <li><strong>≤ 30 min late:</strong> −10%</li>
+          <li><strong>30 min–1 day late:</strong> −25% (no bonuses)</li>
+          <li><strong>&gt; 1 day late:</strong> 0</li>
+        </ul>
+      </section>
+
+      <section id="exams" class="card">
+        <h2>📝 Exams & Study Materials</h2>
+        <p>
+          Two computer-based exams (unless noted otherwise): Midterm and Final.
+          Formats: MCQ, fill-in, short code/essay. Specific rules will be posted
+          before each exam. Study materials are shared on Blackboard throughout
+          the semester.
+        </p>
+        <ul>
+          <li><strong>MIDTERM:</strong> Nov 1 (Saturday)</li>
+          <li><strong>FINAL:</strong> Dec 27 (Saturday)</li>
+        </ul>
+      </section>
+
+      <section id="outline" class="card">
+        <h2>🗂️ Course Outline (by Week)</h2>
+        <ol>
+          <li>
+            Course intro; Defining Engineering/Technology; System concepts
+          </li>
+          <li>Information concepts; What is an IS; IS components</li>
+          <li>
+            Hardware I: Binary/hex, conversions, ops; Boolean logic —
+            <em>HW1 out</em>
+          </li>
+          <li>
+            Hardware II: CPU, I/O, memory &amp; storage —
+            <em>Team Project 1 out</em>
+          </li>
+          <li>Software I: Systems vs Apps; OS; SE basics</li>
+          <li>
+            Software II: Algorithms, conditions/loops, recursion; first program
+            — <em>HW2 out (C++)</em>
+          </li>
+          <li>Software III: Languages, paradigms, compiler vs interpreter</li>
+          <li>
+            Telecom &amp; Networks; services &amp; applications —
+            <em>Team Project 2 (Hour of Code) out</em>
+          </li>
+          <li>Internet &amp; Web I: OSI, Internet stack, IP, DNS</li>
+          <li>
+            Internet &amp; Web II: HTTP, URL, markup; intranet/extranet; cloud —
+            <em>Individual Project 3 (Portfolio) out</em>
+          </li>
+          <li>
+            Data Mgmt: ER modeling; relational model; indexes; sorting/searching
+          </li>
+          <li>DBMS: SQL, NoSQL, transactions/ACID; big data &amp; BI</li>
+          <li>AI/ML &amp; Generative AI — TBA</li>
+          <li>SDLC, Agile, DevOps; feasibility &amp; planning</li>
+          <li>
+            Ethics &amp; social responsibility; privacy, crime, workplace issues
+          </li>
+        </ol>
+        <p class="muted">
+          Disclaimer: subject to change — monitor Blackboard and the ADA
+          Academic Calendar.
+        </p>
+      </section>
+
+      <section id="policies" class="card">
+        <h2>🏛️ University Policies & Resources</h2>
+        <ul class="checklist">
+          <li>
+            Read: Honor Code, Student Code of Conduct, Student Assessment
+            Regulations, and Academic Grievance Policy.
+          </li>
+          <li>
+            <strong>Disability & Health accommodations:</strong> Student
+            Academic Support Services — (+994 12) 437 3235 ext. 226 ·
+            <a href="mailto:studentservices@ada.edu.az"
+              >studentservices@ada.edu.az</a
+            >
+          </li>
+          <li>
+            <strong>Mental health counseling:</strong> Ms. Kamala Aghayeva —
+            (+994 12) 437 3235 ext. 138 ·
+            <a href="mailto:kaghayeva@ada.edu.az">kaghayeva@ada.edu.az</a> ·
+            <a href="mailto:studentsuccess@ada.edu.az"
+              >studentsuccess@ada.edu.az</a
+            >
+          </li>
+          <li>
+            <strong>Writing Center:</strong>
+            <a href="mailto:writingcenter@ada.edu.az"
+              >writingcenter@ada.edu.az</a
+            >
+          </li>
+          <li>
+            <strong>IT & Blackboard help:</strong>
+            <a href="mailto:itservicedesk@ada.edu.az"
+              >itservicedesk@ada.edu.az</a
+            >
+            · <a href="mailto:blackboard@ada.edu.az">blackboard@ada.edu.az</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="tech" class="card">
+        <h2>💻 Technological Requirements</h2>
+        <ul class="checklist">
+          <li>Laptop with reliable internet access.</li>
+          <li>
+            <a href="https://github.com/" target="_blank" rel="noopener"
+              >GitHub</a
+            >
+            account and installed
+            <a href="https://git-scm.com/" target="_blank" rel="noopener"
+              >Git</a
+            >
+            (version control).
+          </li>
+          <li>
+            IDE:
+            <a
+              href="https://code.visualstudio.com/"
+              target="_blank"
+              rel="noopener"
+              >VS Code</a
+            >
+            or
+            <a href="https://cursor.sh/" target="_blank" rel="noopener"
+              >Cursor</a
+            >.
+          </li>
+          <li>
+            Additional tools (e.g., Python, SQL clients) may be requested during
+            the semester.
+          </li>
+        </ul>
+      </section>
+
+      <section id="notes" class="card">
+        <h2>
+          📚 Lecture Notes
+          <span class="tools admin-only">
+            <button class="edit-btn" data-target="notesBody">✎ Edit</button>
+            <button class="mini-btn" data-add="notes">＋ Note</button>
+            <button class="mini-btn danger" data-reset="notes">Reset</button>
+          </span>
+        </h2>
+        <div class="table-scroll">
+          <table id="notesTable">
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Title</th>
+                <th>URL</th>
+                <th>Updated</th>
+                <th class="admin-only">—</th>
+              </tr>
+            </thead>
+            <tbody id="notesBody">
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          Tip: Put files into <code>/files</code> (e.g., .pdf/.docx) in the repo
+          and paste their relative links here (e.g.,
+          <code>files/Week03.docx</code>).
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span id="year"></span> SITE 1101 · ADA University</span>
+        <a class="up" href="#top" aria-label="Back to top">↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
