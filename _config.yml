@@ -1,0 +1,11 @@
+title: "SITE 1101 · Principles of Information Systems"
+email: your-email@example.com
+description: "ADA University, Fall 2025"
+
+# Netlify domain + empty baseurl
+url: "https://site1101.netlify.app"
+baseurl: ""          # IMPORTANT: empty on Netlify (it was "SITE_blog" before)
+
+theme: minima
+plugins:
+  - jekyll-feed
