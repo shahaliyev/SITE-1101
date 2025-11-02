@@ -1,25 +1,34 @@
 title: "SITE 1101 · Principles of Information Systems"
+email: your-email@example.com
 description: "ADA University · Fall 2025"
 
-# Netlify domain + empty baseurl
 url: "https://site1101.netlify.app"
 baseurl: ""
 
-theme: minima
+# ⬇⬇ Use Chirpy via remote_theme
+remote_theme: cotes2020/jekyll-theme-chirpy
 
-# Top navigation menu
-header_pages:
-  - index.markdown
-  - lecture-notes.md
-  - news.md
-  - staff.md
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
 
+# Optional but nice with Chirpy
+lang: en
+timezone: Asia/Baku
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Keep your collection and pages — Chirpy will render them nicely
 collections:
   lectures:
     output: true
     permalink: /lectures/:name/
 
-plugins:
-  - jekyll-feed
-
-markdown: kramdown
+# Keep your top-level nav simple for now (Chirpy uses a different nav system,
+# but this works fine while we "test"):
+header_pages:
+  - index.markdown
+  - lecture-notes.md
+  - news.md
+  - staff.md
