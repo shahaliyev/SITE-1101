@@ -116,9 +116,10 @@ An **online banking system** takes transaction requests as input, processes them
 
 ---
 
+
 ## 7. Additional Materials
 
-- *One of the Most Epic Engineering Feats in History*  
-- *How Steam Engines Work*  
-- *How Metro Tokens / Cards Work*  
-- *The Meaning of Knowledge*
+- 🎥 [One of the Most Epic Engineering Feats in History](https://www.youtube.com/watch?v=dyckL6HuLRU)  
+- 🔧 [How Steam Engines Work](https://www.youtube.com/watch?v=xnClSss50pI)  
+- 🚇 [How Metro Tokens / Cards Work](https://www.youtube.com/watch?v=q1qlUTYM9oQ)  
+- 💡 [The Meaning of Knowledge](https://www.youtube.com/watch?v=kXhJ3hHK9hQ)
