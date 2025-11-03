@@ -23,7 +23,7 @@ The course provides a general overview of what SITE students of the [ADA Univers
 |-----------|--------------|------|
 | Monday    | 16:00–17:30  | B012 |
 | Tuesday   | 12:00–13:30  | B012 |
-| Wednesday | 14:40-16:40  | B012 |
+| Wednesday | 14:40-16:10  | B012 |
 
 ## 📅  Weekly Schedule
 
