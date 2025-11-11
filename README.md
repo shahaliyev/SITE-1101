@@ -58,3 +58,14 @@ Check [Academic Calendar](https://www.ada.edu.az/en/academics/academic-calendar)
 
 ## 📝 Technological Requirements
 Students are to use their laptops to implement the class assignments. [Github account](https://github.com/), downloaded [git version control](https://git-scm.com/book/ms/v2/Getting-Started-About-Version-Control) system, and IDE ([VSCode](https://code.visualstudio.com/) or [Cursor](https://cursor.com/download)) will also be needed. Additional requirements may be provided by the instructor during the semester.
+
+---
+
+## 👥 Staff
+
+
+- **Instructor:** Ismayil Shahaliyev 
+- **TAs:**  
+  - _Rahida Asadli_
+  - _Nilufar Ismayilova_ 
+  - _Rahman Karimov_ 

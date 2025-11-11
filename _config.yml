@@ -12,7 +12,6 @@ header_pages:
   - index.markdown
   - lecture-notes.md
   - news.md
-  - staff.md
 
 collections:
   lectures:
