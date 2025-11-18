@@ -1,11 +1,10 @@
 ---
 layout: page
-title: SITE 1101 Lecture Notes — Software, Operating Systems, Algorithmic Actions
-order: 2
+title: Week 05 — Software, Operating Systems, Algorithmic Actions
+order: 3
 ---
 
 <style>
-/* Self-contained frame styling */
 .frame{
   border:1px solid #999; 
   border-radius:8px; 
@@ -13,18 +12,124 @@ order: 2
   background:#fafafa; 
   margin:1rem 0;
 }
+
+
+/* TOC toggle button */
+#toc-toggle {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.5rem;
+  z-index: 999;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* TOC panel */
+#toc-panel {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 3.5rem;
+  width: 260px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fcfcfc;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  display: none; /* default gizlidir */
+  z-index: 998;
+}
+
+#toc-panel.is-open {
+  display: block;
+}
+
+#toc-panel h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+#toc-panel ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+#toc-panel li {
+  margin-bottom: 0.35rem;
+}
+
+#toc-panel a {
+  text-decoration: none;
+  color: #1a73e8;
+}
+
+#toc-panel a:hover {
+  text-decoration: underline;
+}
+.lecture-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.prev-btn, .next-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #1a73e8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #eee;
+}
+
+/* Mobil cihazlarda ümumiyyətlə göstərmə */
+@media (max-width: 900px) {
+  #toc-toggle,
+  #toc-panel {
+    display: none !important;
+  }
+}
 </style>
-
-
-**SITE 1101: Principles of Information Systems**
-
-**Week 05**
-
-**Software, Operating Systems, Algorithmic Actions**
 
 **Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov, Ismayil Shahaliyev
 
 **Created / Updated:** Oct 25 2025 **/** Oct 30 2025
+<br>
+<span style="color: #666; font-style: italic; font-size: 0.9em;">
+  ⏳ 
+  {% assign words = page.content | number_of_words %}
+  {% if words < 360 %}
+    1 min read
+  {% else %}
+    {{ words | divided_by: 180 }} min read
+  {% endif %}
+
+
+<button id="toc-toggle">☰ Sections</button>
+
+<div id="toc-panel">
+  <h4>On this page</h4>
+  <ul>
+    <li><a href="#software">Software</a></li>
+    <li><a href="#operating-systems-os">Operating Systems (OS)</a></li>
+    <li><a href="#algorithmic-actions">Algorithmic Actions</a></li>
+    <li><a href="#additional-material">Additional Material</a></li>
+  </ul>
+</div>
 
 # Software
 
@@ -78,7 +183,7 @@ The [_operating system_](https://en.wikipedia.org/wiki/Operating_system) is the 
 The operating system acts as an intermediary between users, applications, and the computer hardware. It translates high-level user commands into machine-level operations and manages system resources such as memory, processing time, and device communication to ensure efficient coordination across all components.
 
 _Figure 2: Diagram showing the placement of the operating system between hardware and user applications.  
-Adapted from "Operating system placement," Wikimedia Commons, <https://commons.wikimedia.org/wiki/File:Operating_system_placement.svg>. Licensed under CC BY-SA 3.0._
+Adapted from "Operating system placement," Wikimedia Commons, [Wikimedia Source](https://commons.wikimedia.org/wiki/File:Operating_system_placement.svg). Licensed under CC BY-SA 3.0._
 
 <div class="frame" markdown="1">
 
@@ -114,16 +219,19 @@ Algorithmic actions describe the fundamental operations that make up any compute
 **_Example._** If the temperature is above 30 °C, the system turns on the air conditioner; otherwise, it keeps it off.
 
 In programming (pseudo-code):
+{% highlight c %}
 
-**if** (temperature > 30) {
+if (temperature > 30) {
 
 turnOnAC();
 
-} **else** {
+} else {
 
 turnOffAC();
 
 }
+{% endhighlight %}
+
 </div>
 **Repetition** means performing the same set of instructions multiple times until a certain condition is met. This prevents code duplication and makes programs efficient.
 <div class="frame" markdown="1">
@@ -131,12 +239,15 @@ turnOffAC();
 **_Example._** Printing numbers from 1 to 5 using a loop.
 
 In programming (pseudo-code):
+{% highlight c %}
 
-**for** (int i = 1; i <= 5; i++) {
+for (int i = 1; i <= 5; i++) {
 
 print(i);
 
 }
+{% endhighlight %}
+
 </div>
 **Modularization** means dividing a complex program into smaller, manageable, and reusable parts, called modules. This improves readability, debugging, and reusability.
 <div class="frame" markdown="1">
@@ -182,12 +293,15 @@ _factorial(n) = factorial(n-1) \* n_
 
 We can write the following recursive function:
 <div class="frame" markdown="1">
+{% highlight c %}
 
-**factorial**(n) {
+factorial(n) {
 
-return n \* factorial(n - 1);
+return n * factorial(n - 1);
 
 }
+{% endhighlight %}
+
 </div>
 
 But this pseudo-code has an issue. It is akin to two mirrors looking at each other - it will never stop. It will return the following functions:
@@ -202,15 +316,16 @@ _ad infinitum_
 
 Not only _factorial(-1)_ doesn't make sense, but also you will be in an infinite recursion. To fix it, you need to add a halting (stopping) condition: Base case.
 
-<div class="frame" markdown="1">
-
-**factorial**(n) {
-
-**if** (n == 1 or n == 0) return 1; // base case
-
-**else** return n \* factorial(n - 1); // recursive call
-
+<div class="frame">
+{% highlight c %}
+factorial(n) {
+  if (n == 1 || n == 0) {
+    return 1; // base case
+  } else {
+    return n * factorial(n - 1); // recursive call
+  }
 }
+{% endhighlight %}
 </div>
 
 So, your code will work in the following way, given that n is a non-negative number (in this case n=4): _factorial(4) = factorial(3) \* 4 = factorial(2) \* 3 \* 4 = factorial(1) \* 2 \* 3 \* 4 = 1 \* 2 \* 3 \* 4 = 24._
@@ -242,3 +357,26 @@ There are two main types of binding: **Static (compile-time)**: the link between
 - [What's an algorithm? - David J. Malan](https://www.youtube.com/watch?v=6hfOvs8pY1k)
 - [Operating Systems: Crash Course Computer Science #18](https://www.youtube.com/watch?v=26QPDBe-NB8)
 - [Programming myths that waste your time](https://www.youtube.com/watch?v=niWpfRyvs2U)
+<hr>
+
+<div class="lecture-nav">
+  {% if page.previous %}
+    <a class="prev-btn" href="{{ page.previous.url | relative_url }}">← Previous: {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next %}
+    <a class="next-btn" href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }} →</a>
+  {% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('toc-toggle');
+  var panel = document.getElementById('toc-panel');
+  if (!btn || !panel) return;
+
+  btn.addEventListener('click', function() {
+    panel.classList.toggle('is-open');
+  });
+});
+</script>

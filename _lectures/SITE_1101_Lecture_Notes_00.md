@@ -1,11 +1,10 @@
 ---
 layout: page
-title: SITE 1101 Lecture Notes — Engineering, Technology, and System
+title: Week 01 & 02 — Engineering, Technology, and System
 order: 0
 ---
 
 <style>
-/* Self-contained frame styling */
 .frame{
   border:1px solid #999; 
   border-radius:8px; 
@@ -13,17 +12,41 @@ order: 0
   background:#fafafa; 
   margin:1rem 0;
 }
+.lecture-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.prev-btn, .next-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #1a73e8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #eee;
+}
+
 </style>
-
-**SITE 1101: Principles of Information Systems**
-
-**Week 01 & 02**
-
-**Engineering, Technology, and System**
 
 **Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov, Ismayil Shahaliyev
 
 **Created / Updated:** Oct 10 2025 **/** Oct 21 2025
+<br>
+<span style="color: #666; font-style: italic; font-size: 0.9em;">
+  ⏳ 
+  {% assign words = page.content | number_of_words %}
+  {% if words < 360 %}
+    1 min read
+  {% else %}
+    {{ words | divided_by: 180 }} min read
+  {% endif %}
 
 _System_ is a set of interrelated components working together toward a common goal by accepting **inputs**, **processing** them, and producing **outputs**. _Control system_ is a system that continuously monitors outputs and uses **feedback** to adjust inputs or processes, maintaining the system's desired performance and stability.
 
@@ -99,3 +122,16 @@ that are configured to collect, manipulate, store, and process data into informa
 - [How do Steam Engines Work?](https://www.youtube.com/watch?v=xnClSss50pI)
 - [How Metro Tokens / Cards work?](https://www.youtube.com/embed/q1qlUTYM9oQ)
 - [The Meaning of Knowledge](https://www.youtube.com/embed/kXhJ3hHK9hQ?utm_source=chatgpt.com)
+
+<hr>
+
+<div class="lecture-nav">
+  {% if page.previous %}
+    <a class="prev-btn" href="{{ page.previous.url | relative_url }}">← Previous: {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next %}
+    <a class="next-btn" href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }} →</a>
+  {% endif %}
+</div>
+
