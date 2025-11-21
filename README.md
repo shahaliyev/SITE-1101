@@ -1,3 +1,30 @@
+<style>
+  .schedule-wrapper {
+    overflow-x: auto;     
+    position: relative;   
+    margin-bottom: 2rem;
+    box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.2); 
+  }
+
+  .schedule-wrapper th:first-child,
+  .schedule-wrapper td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #fff; 
+    z-index: 2;
+    border-right: 2px solid #eee;
+  }
+
+  .schedule-wrapper th:nth-child(2),
+  .schedule-wrapper td:nth-child(2) {
+    position: sticky;
+    left: 60px;
+    background-color: #fff;
+    z-index: 2;
+    border-right: 2px solid #eee;
+  }
+</style>
+
 # 🎓 SITE 1101: Principles of Information Systems
 
 > 🔔 This page will be used for quick tips, updates and announcements (e.g. TA office hours).
@@ -29,18 +56,22 @@ The course provides a general overview of what SITE students of the [ADA Univers
 
 Check [Academic Calendar](https://www.ada.edu.az/en/academics/academic-calendar) for updates.
 
-| Day  | Time  | 10425 | 10426 | 10427 | 10428 | 10429 | 10430 | 10431 | 10432 | 10640 |
-|------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Mon  | 08:30 | E125  | E125  | E125  | E125  | E125  | E125  | E125  | E125  | E125  |
-| Tue  | 08:30 | B303  |       |       |       |       |       |       |       |       |
-| Tue  | 10:00 |       |       |       |       |       |       |       | A301  |       |
-| Tue  | 14:30 |       |       |       |       |       |       | D208  |       |       |
-| Tue  | 16:00 |       |       |       |       |       | B101  |       |       |       |
-| Thu  | 08:30 |       | B203  |       |       |       |       |       |       |       |
-| Fri  | 08:30 |       |       | B302  |       |       |       |       |       |       |
-| Fri  | 10:00 |       |       |       | B302  |       |       |       |       |       |
-| Fri  | 13:00 |       |       |       |       | B102  |       |       |       |       |
-| Sat  | 11:30 |       |       |       |       |       |       |       |       | B303  |
+<div class="schedule-wrapper" markdown="1">
+
+| Day   | Time  | 10425 | 10426 | 10427 | 10428 | 10429 | 10430 | 10431 | 10432 | 10640 |
+|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| Mon   | 08:30 | E125  | E125  | E125  | E125  | E125  | E125  | E125  | E125  | E125  |
+| Tue   | 08:30 | B303  |       |       |       |       |       |       |       |       |
+| Tue   | 10:00 |       |       |       |       |       |       |       | A301  |       |
+| Tue   | 14:30 |       |       |       |       |       |       | D208  |       |       |
+| Tue   | 16:00 |       |       |       |       |       | B101  |       |       |       |
+| Thu   | 08:30 |       | B203  |       |       |       |       |       |       |       |
+| Fri   | 08:30 |       |       | B302  |       |       |       |       |       |       |
+| Fri   | 10:00 |       |       |       | B302  |       |       |       |       |       |
+| Fri   | 13:00 |       |       |       |       | B102  |       |       |       |       |
+| Sat   | 11:30 |       |       |       |       |       |       |       |       | B303  |
+
+</div>
 
 ## 📊 Assessment Breakdown
 

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: SITE 1101 Lecture Notes — Von Neumann Architecture, Binary Representation, Arithmetic & Logic Operations
+title: Week 03 — Von Neumann Architecture, Binary Representation, Arithmetic & Logic Operations
 order: 1
 ---
 
 <style>
-/* Self-contained frame styling */
 .frame{
   border:1px solid #999; 
   border-radius:8px; 
@@ -13,17 +12,139 @@ order: 1
   background:#fafafa; 
   margin:1rem 0;
 }
+
+.table-wrapper {
+  overflow-x: auto; 
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.1); 
+}
+.table-wrapper table {
+  min-width: 600px; 
+}
+
+/* TOC toggle button */
+#toc-toggle {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.5rem;
+  z-index: 999;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.lecture-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.prev-btn, .next-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #1a73e8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #eee;
+}
+
+/* TOC panel */
+#toc-panel {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 3.5rem;
+  width: 260px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fcfcfc;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  display: none; /* default gizlidir */
+  z-index: 998;
+}
+
+#toc-panel.is-open {
+  display: block;
+}
+
+#toc-panel h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+#toc-panel ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+#toc-panel li {
+  margin-bottom: 0.35rem;
+}
+
+#toc-panel a {
+  text-decoration: none;
+  color: #1a73e8;
+}
+
+#toc-panel a:hover {
+  text-decoration: underline;
+}
+
+/* Mobil cihazlarda ümumiyyətlə göstərmə */
+@media (max-width: 900px) {
+  #toc-toggle,
+  #toc-panel {
+    display: none !important;
+  }
+}
 </style>
 
-**SITE 1101: Principles of Information Systems**
-
 **Week 03**
-
-**Von Neumann Architecture, Binary Representation, Arithmetic & Logic Operations**
 
 **Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov, Ismayil Shahaliyev
 
 **Created / Updated:** Oct 23 2025 **/** Oct 23 2025
+
+<br>
+<span style="color: #666; font-style: italic; font-size: 0.9em;">
+  ⏳ 
+  {% assign words = page.content | number_of_words %}
+  {% if words < 360 %}
+    1 min read
+  {% else %}
+    {{ words | divided_by: 180 }} min read
+  {% endif %}
+
+<button id="toc-toggle">☰ Sections</button>
+
+<div id="toc-panel">
+  <h4>On this page</h4>
+  <ul>
+    <li><a href="#von-neumann-architecture">Von Neumann Architecture</a></li>
+    <li><a href="#continuous-vs-discrete-analog-vs-digital">Continuous vs Discrete | Analog vs Digital</a></li>
+    <li><a href="#bit-byte-data-units">Bit, Byte, Data Units</a></li>
+    <li><a href="#number-systems">Number Systems</a></li>
+    <li><a href="#binary-arithmetic-and-twos-complement">Binary Arithmetic and Two's Complement</a></li>
+    <li><a href="#transistors-and-moores-law">Transistors and Moore's Law</a></li>
+    <li><a href="#boolean-logic">Boolean Logic</a></li>
+    <li><a href="#additional-material">Additional Material</a></li>
+  </ul>
+</div>
 
 # Von Neumann Architecture
 
@@ -60,7 +181,7 @@ In von Neumann architecture, both program instructions and data are stored in _R
 </div>
 While von Neumann solved how a computer could change tasks, another challenge remained: **how should instructions and data be represented?**
 
-# Continuous vs Discrete | Analog vs Digital
+# Continuous vs Discrete | Analog vs Digital {#continuous-vs-discrete-analog-vs-digital}
 
 _Continuous_ means values can vary smoothly and without breaks over a range. Between any two values, there are infinitely many possible intermediate values. A classic example is a mercury thermometer: if the temperature is 21 °C and then rises to 22 °C, it passes through 21.1 °C, 21.11 °C, 21.111 °C, and so on - endlessly many points. The temperature does not "jump" from one reading to another; it changes continuously.
 
@@ -102,6 +223,8 @@ Eight bits grouped together form a _byte_, the standard unit for representing a 
 
 Every piece of data inside a computer - numbers, letters, images, even videos - is represented using _number systems_. A number system defines how we represent and interpret numerical values using a specific set of symbols (digits) and a _base_ that indicates how many symbols are available.
 
+<div class="table-wrapper" markdown="1">
+
 | **System** | **Base** | **Digits Used** | **Example** | **Usage** |
 | --- | --- | --- | --- | --- |
 | **Decimal (Base-10)** | 10  | 0-9 | 245₁₀ | Used by humans for everyday counting and arithmetic. |
@@ -111,6 +234,7 @@ Every piece of data inside a computer - numbers, letters, images, even videos - 
 | **Hexadecimal (Base-16)** | 16  | 0-9, A-F | 2AF₁₆ | Used in memory addressing, machine instructions, representing colors, etc. Requires less symbols for describing large numbers. |
 | --- | --- | --- | --- | --- |
 
+</div>
 **_Decimal System (Base-10)_**
 
 The decimal system uses ten digits (0-9). Each position represents a power of 10.
@@ -130,6 +254,8 @@ Each hex digit equals 4 binary bits.
 
 _Example:_ 2AF<sub>16</sub> = (2×16<sup>2</sup>) + (A×16<sup>1</sup>) + (F×16<sup>0</sup>) = (2×256) + (10×16) + (15×1) = 687<sub>10</sub>
 
+<div class="table-wrapper" markdown="1">
+
 | Decimal | Binary | Hexadecimal | Decimal | Binary | Hexadecimal |
 |:------:|:------:|:-----------:|:------:|:------:|:-----------:|
 | 0  | 0000 | 0 | 8  | 1000 | 8 |
@@ -141,6 +267,7 @@ _Example:_ 2AF<sub>16</sub> = (2×16<sup>2</sup>) + (A×16<sup>1</sup>) + (F×16
 | 6  | 0110 | 6 | 14 | 1110 | E |
 | 7  | 0111 | 7 | 15 | 1111 | F |
 
+</div>
 
 <div class="frame" markdown="1">
 
@@ -320,3 +447,26 @@ _Figure 6: XOR logic gate symbol. Source: Inductiveload, "XOR symbol,"_ [_Wikime
 - [Describe and compare basic logic operations i.e. NOT, AND, OR, XOR](https://adauniversity-my.sharepoint.com/:v:/g/personal/ayusubov_ada_edu_az/EW5JvN8DqqpIo_zhJ0VObGEBnhj-NsxbAWucTZ3p07znrg)
 - [Explain addition of two binary numbers (positive integers)](https://adauniversity-my.sharepoint.com/:v:/g/personal/ayusubov_ada_edu_az/EfdT23BQClJOrU3O3QCRRjEBaX5FtZl0sYb15bRn6YHcEw)
 - [Explain subtraction of two binary numbers (positive integers) and the use of two's complement](https://adauniversity-my.sharepoint.com/personal/ayusubov_ada_edu_az/_layouts/15/stream.aspx?id=%2Fpersonal%2Fayusubov_ada_edu_az%2FDocuments%2FSITE-SITE-1101%2Fweek-03-binary-subtraction.mp4&ga=1&startedResponseCatch=true&referrer=StreamWebApp.Web&referrerScenario=AddressBarCopied.view.b6f8c953-c10d-4205-96e7-d25b1511b265)
+<hr>
+
+<div class="lecture-nav">
+  {% if page.previous %}
+    <a class="prev-btn" href="{{ page.previous.url | relative_url }}">← Previous: {{ page.previous.title }}</a>
+  {% endif %}
+
+  {% if page.next %}
+    <a class="next-btn" href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }} →</a>
+  {% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('toc-toggle');
+  var panel = document.getElementById('toc-panel');
+  if (!btn || !panel) return;
+
+  btn.addEventListener('click', function() {
+    panel.classList.toggle('is-open');
+  });
+});
+</script>
