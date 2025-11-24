@@ -9,10 +9,8 @@ theme: minima
 
 # Top navigation menu
 header_pages:
-  - index.markdown
   - lecture-notes.md
-  - news.md
-
+  
 collections:
   lectures:
     output: true
