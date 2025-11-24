@@ -1,29 +1,3 @@
-<style>
-  .schedule-wrapper {
-    overflow-x: auto;     
-    position: relative;   
-    margin-bottom: 2rem;
-    box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.2); 
-  }
-
-  .schedule-wrapper th:first-child,
-  .schedule-wrapper td:first-child {
-    position: sticky;
-    left: 0;
-    background-color: #fff; 
-    z-index: 2;
-    border-right: 2px solid #eee;
-  }
-
-  .schedule-wrapper th:nth-child(2),
-  .schedule-wrapper td:nth-child(2) {
-    position: sticky;
-    left: 60px;
-    background-color: #fff;
-    z-index: 2;
-    border-right: 2px solid #eee;
-  }
-</style>
 
 # 🎓 SITE 1101: Principles of Information Systems
 
