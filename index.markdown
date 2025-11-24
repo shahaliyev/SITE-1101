@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Welcome to SITE 1101
 permalink: /
 ---
 

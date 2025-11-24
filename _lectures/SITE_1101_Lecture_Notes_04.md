@@ -3,117 +3,8 @@ layout: page
 title: Week 04 — Hardware, CPU, Input/Processing/Output/Storage Devices
 order: 2
 ---
-<style>
-.frame{
-  border:1px solid #999; 
-  border-radius:8px; 
-  padding:12px 16px; 
-  background:#fafafa; 
-  margin:1rem 0;
-}
 
-.table-wrapper {
-  overflow-x: auto; 
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
-  box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.1); 
-}
-.table-wrapper table {
-  min-width: 600px; 
-}
-.lecture-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
-
-.prev-btn, .next-btn {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  background: #fafafa;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  color: #1a73e8;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.prev-btn:hover, .next-btn:hover {
-  background: #eee;
-}
-
-/* TOC toggle button */
-#toc-toggle {
-  position: fixed;
-  right: 1.25rem;
-  bottom: 1.5rem;
-  z-index: 999;
-  border: 1px solid #ccc;
-  background: #ffffff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* TOC panel */
-#toc-panel {
-  position: fixed;
-  right: 1.25rem;
-  bottom: 3.5rem;
-  width: 260px;
-  max-height: 60vh;
-  overflow-y: auto;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: #fcfcfc;
-  font-size: 0.9rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-  display: none; /* default gizlidir */
-  z-index: 998;
-}
-
-#toc-panel.is-open {
-  display: block;
-}
-
-#toc-panel h4 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-#toc-panel ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-#toc-panel li {
-  margin-bottom: 0.35rem;
-}
-
-#toc-panel a {
-  text-decoration: none;
-  color: #1a73e8;
-}
-
-#toc-panel a:hover {
-  text-decoration: underline;
-}
-
-/* Mobil cihazlarda ümumiyyətlə göstərmə */
-@media (max-width: 900px) {
-  #toc-toggle,
-  #toc-panel {
-    display: none !important;
-  }
-}
-</style>
-
-
+{% include lecture-styles.html %}
 
 **Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov
 
@@ -135,17 +26,7 @@ order: 2
   </ul>
 </div>
 
-<br>
-<span style="color: #666; font-style: italic; font-size: 0.9em;">
-  ⏳ 
-  {% assign words = page.content | number_of_words %}
-  {% if words < 360 %}
-    1 min read
-  {% else %}
-    {{ words | divided_by: 180 }} min read
-  {% endif %}
-
-
+{% include reading-time.html %}
 
 ### Hardware
 
@@ -365,24 +246,4 @@ However, when you search for a friend's name in a contacts app or look up a spec
 
 <hr>
 
-<div class="lecture-nav">
-  {% if page.previous %}
-    <a class="prev-btn" href="{{ page.previous.url | relative_url }}">← Previous: {{ page.previous.title }}</a>
-  {% endif %}
-
-  {% if page.next %}
-    <a class="next-btn" href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }} →</a>
-  {% endif %}
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var btn = document.getElementById('toc-toggle');
-  var panel = document.getElementById('toc-panel');
-  if (!btn || !panel) return;
-
-  btn.addEventListener('click', function() {
-    panel.classList.toggle('is-open');
-  });
-});
-</script>
+{% include lecture-footer.html %}
