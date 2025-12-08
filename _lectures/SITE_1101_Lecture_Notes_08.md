@@ -10,9 +10,27 @@ order: 5
 **Created / Updated:** Nov 23 2025 **/** Dec 2 2025
 {% include reading-time.html %}
 
+<button id="toc-toggle">☰ Sections</button>
+
+<div id="toc-panel">
+  <h4>On this page</h4>
+  <ul>
+    <li><a href="#the-internet">The Internet</a></li>
+    <li><a href="#the-osi-model-open-systems-interconnection">The OSI Model (Open Systems Interconnection)</a></li>
+    <li><a href="#internet-protocol-suite-tcpip">Internet Protocol Suite (TCP/IP)</a></li>
+    <li><a href="#ip-addressing">IP Addressing</a></li>
+    <li><a href="#dns-domain-name-system">DNS (Domain Name System)</a></li>
+    <li><a href="#world-wide-web">World Wide Web</a></li>
+    <li><a href="#markup-languages">Markup Languages</a></li>
+    <li><a href="#intranet-and-extranet">Intranet & Extranet</a></li>
+    <li><a href="#cloud-computing">Cloud Computing</a></li>
+    <li><a href="#additional-material">Additional Material</a></li>
+  </ul>
+</div>
+
 ### Telecommunications
 
-[Telecommunications](https://en.wikipedia.org/wiki/Telecommunications) at its core, is the long-distance transmission of information using **electronic or electromagnetic signals**. Whenever two devices exchange information - whether it is _a voice call, a text message, a video stream, or a bank transaction_ - some form of telecommunications is functioning in the background. What makes telecommunications essential is that it allows communication to happen without the sender and receiver being physically close. A phone call from one country to another, a university campus connecting its buildings, or a satellite sending weather data to Earth are all examples of telecommunications enabling interaction across space.
+[Telecommunications](https://en.wikipedia.org/wiki/Telecommunications) at its core, is the long-distance transmission of information using **electronic or electromagnetic signals**. Whenever two devices exchange information - whether it is _a voice call, a text message, a video stream, or a bank transaction_ - some form of telecommunications is functio  ning in the background. What makes telecommunications essential is that it allows communication to happen without the sender and receiver being physically close. A phone call from one country to another, a university campus connecting its buildings, or a satellite sending weather data to Earth are all examples of telecommunications enabling interaction across space.
 
 ### The General Model of a Telecommunication System
 
@@ -289,3 +307,5 @@ _Figure 3. Diagram of different network topologies_ _Adapted from Network Topolo
 - [**YouTubeNetwork Layers Model (Networking Basics) - Computerphile**](https://www.youtube.com/watch?v=eelvWAURfdI)
 - [**YouTubeNetwork Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, & Wireless Mesh Topology)**](https://www.youtube.com/watch?v=zbqrNg4C98U)
 - [**YouTubeWhat is Ethernet?**](https://www.youtube.com/watch?v=HLziLmaYsO0&t=342s)
+
+{% include lecture-footer.html %}
