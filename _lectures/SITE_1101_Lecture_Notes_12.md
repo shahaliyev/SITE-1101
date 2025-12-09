@@ -15,6 +15,21 @@ order: 7
 
 <button id="toc-toggle">☰ Sections</button>
 
+<div id="toc-panel">
+  <h4>On this page</h4>
+  <ul>
+    <li><a href="#purpose-of-ai-machine-learning-and-deep-learning">Purpose of AI, Machine Learning and Deep Learning</a></li>
+    <li><a href="#linear-regression-algorithm">Linear Regression Algorithm</a></li>
+    <li><a href="#artificial-neural-networks">Artificial Neural Networks</a></li>
+    <li><a href="#large-language-models-llms">Large Language Models (LLMs)</a></li>
+    <li><a href="#matrix-multiplication">Matrix Multiplication</a></li>
+    <li><a href="#csp-backtracking-algorithm">CSP Backtracking Algorithm</a></li>
+    <li><a href="#minimax-algorithm">Minimax Algorithm</a></li>
+    <li><a href="#reinforcement-learning-rl">Reinforcement Learning (RL)</a></li>
+    <li><a href="#additional-materials">Additional Materials</a></li>
+  </ul>
+</div>
+
 
 ### Purpose of AI, Machine Learning and Deep Learning
 

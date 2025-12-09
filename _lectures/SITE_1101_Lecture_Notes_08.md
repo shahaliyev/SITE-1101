@@ -12,18 +12,23 @@ order: 5
 
 <button id="toc-toggle">☰ Sections</button>
 
-<div id="toc-panel">
-  <h4>On this page</h4>
-  <ul>
-    <li><a href="#the-internet">The Internet</a></li>
-    <li><a href="#the-osi-model-open-systems-interconnection">The OSI Model (Open Systems Interconnection)</a></li>
-    <li><a href="#internet-protocol-suite-tcpip">Internet Protocol Suite (TCP/IP)</a></li>
-    <li><a href="#ip-addressing">IP Addressing</a></li>
-    <li><a href="#dns-domain-name-system">DNS (Domain Name System)</a></li>
-    <li><a href="#world-wide-web">World Wide Web</a></li>
-    <li><a href="#markup-languages">Markup Languages</a></li>
-    <li><a href="#intranet-and-extranet">Intranet & Extranet</a></li>
-    <li><a href="#cloud-computing">Cloud Computing</a></li>
+<div id="toc-panel" class="toc-panel" style="display:none;"> <ul>
+    <li><a href="#telecommunications">Telecommunications</a></li>
+    <li><a href="#the-general-model-of-a-telecommunication-system">The General Model of a Telecommunication System</a></li>
+    <li><a href="#classifications-of-communication">Classifications of Communication</a></li>
+    <li><a href="#simplex-communication">Simplex Communication</a></li>
+    <li><a href="#half-duplex-communication">Half-Duplex Communication</a></li>
+    <li><a href="#full-duplex-communication">Full-Duplex Communication</a></li>
+    <li><a href="#synchronous-communication">Synchronous Communication</a></li>
+    <li><a href="#asynchronous-communication">Asynchronous Communication</a></li>
+    <li><a href="#personal-area-network-pan">Personal Area Network (PAN)</a></li>
+    <li><a href="#local-area-network-lan">Local Area Network (LAN)</a></li>
+    <li><a href="#metropolitan-area-network-man">Metropolitan Area Network (MAN)</a></li>
+    <li><a href="#wide-area-network-wan">Wide Area Network (WAN)</a></li>
+    <li><a href="#telecommunication-channels-and-media">Telecommunication Channels and Media</a></li>
+    <li><a href="#understanding-computer-networks">Understanding Computer Networks</a></li>
+    <li><a href="#processing-alternatives-centralized-decentralized-and-distributed">Processing Alternatives</a></li>
+    <li><a href="#network-topologies">Network Topologies</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
 </div>
@@ -307,5 +312,16 @@ _Figure 3. Diagram of different network topologies_ _Adapted from Network Topolo
 - [**YouTubeNetwork Layers Model (Networking Basics) - Computerphile**](https://www.youtube.com/watch?v=eelvWAURfdI)
 - [**YouTubeNetwork Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, & Wireless Mesh Topology)**](https://www.youtube.com/watch?v=zbqrNg4C98U)
 - [**YouTubeWhat is Ethernet?**](https://www.youtube.com/watch?v=HLziLmaYsO0&t=342s)
+
+<script>
+  document.getElementById('toc-toggle').addEventListener('click', function() {
+    var toc = document.getElementById('toc-panel');
+    if (toc.style.display === "none") {
+      toc.style.display = "block";
+    } else {
+      toc.style.display = "none";
+    }
+  });
+</script>
 
 {% include lecture-footer.html %}
