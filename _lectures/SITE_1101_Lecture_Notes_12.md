@@ -1,11 +1,9 @@
 ---
 layout: page
 title: Week 12 — Artificial Intelligence and Machine Learning
-order: 7
+order: 8
 ---
 {% include lecture-styles.html %}
-
-**Week 12**
 
 **Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov, Ismayil Shahaliyev
 
