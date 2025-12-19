@@ -11,6 +11,8 @@ theme: minima
 header_pages:
   - lecture-notes.md
   - leaderboard.md
+  - communication.md
+  
 collections:
   lectures:
     output: true
