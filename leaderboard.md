@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🏆 Leaderboard
+title: 🏆 Project 1
 permalink: /leaderboard/
 ---
 
@@ -142,7 +142,6 @@ permalink: /leaderboard/
 </style>
 
 <div class="intro">
-  <h2>Student Projects Showcase</h2>
   <p>Below are the best projects submitted by our student teams this semester.</p>
 </div>
 
