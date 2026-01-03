@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Week 12 — Artificial Intelligence and Machine Learning
+title: Week 12 — Artificial Intelligence, Machine Learning, Deep Learning
 order: 8
 ---
+
 {% include lecture-styles.html %}
 
-**Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov, Ismayil Shahaliyev
+**Authors:** Nilufar Ismayilova, Ismayil Shahaliyev, Rumiyya Alili
 
-**Created / Updated:** Nov 29 2025 **/** Nov 29 2025
+**Created / Updated:** Nov 29 2025 **/** Dec 23 2025
 
 {% include reading-time.html %}
 
@@ -19,149 +20,230 @@ order: 8
     <li><a href="#purpose-of-ai-machine-learning-and-deep-learning">Purpose of AI, Machine Learning and Deep Learning</a></li>
     <li><a href="#linear-regression-algorithm">Linear Regression Algorithm</a></li>
     <li><a href="#artificial-neural-networks">Artificial Neural Networks</a></li>
-    <li><a href="#large-language-models-llms">Large Language Models (LLMs)</a></li>
+    <li><a href="#large-language-models-llm">Large Language Models (LLMs)</a></li>
     <li><a href="#matrix-multiplication">Matrix Multiplication</a></li>
-    <li><a href="#csp-backtracking-algorithm">CSP Backtracking Algorithm</a></li>
     <li><a href="#minimax-algorithm">Minimax Algorithm</a></li>
-    <li><a href="#reinforcement-learning-rl">Reinforcement Learning (RL)</a></li>
+    <li><a href="#reinforcement-learning">Reinforcement Learning (RL)</a></li>
     <li><a href="#additional-materials">Additional Materials</a></li>
   </ul>
 </div>
 
-
 ### Purpose of AI, Machine Learning and Deep Learning
 
-[_Artificial Intelligence_](https://en.wikipedia.org/wiki/Artificial_intelligence) (AI) refers to computer systems designed to perform tasks that normally require human intelligence, such as decision making, pattern recognition, object detection, translation, or playing games. The core idea is to enable machines to learn from data or experience so that they improve over time without being explicitly programmed for every scenario.
-
-[_Machine Learning_](https://en.wikipedia.org/wiki/Machine_learning) (ML) is a subset of AI that focuses on training models using data. Instead of writing rules manually, we give the system examples, and it learns patterns on its own. For instance, instead of coding "what a cat looks like," we show the system many cat images and let it learn the shared patterns.
-
-[_Deep Learning_](https://en.wikipedia.org/wiki/Deep_learning) (DL) is a specialized ML approach that uses multi-layered neural networks. These networks automatically extract features from raw data, making them especially powerful for image recognition, language understanding, and large-scale decision-making tasks.
-
+[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) (AI) refers to the field concerned with building computer systems that exhibit intelligent behavior. An AI system is one that can reason, plan, make decisions, solve problems, or act purposefully in an environment in pursuit of goals. The defining feature of AI is what the system does, not how it is implemented. AI systems do not need to learn from data: classical [rule-based expert systems](https://en.wikipedia.org/wiki/Rule-based_system), _symbolic_ logic engines, search and planning algorithms, and game-playing systems based on handcrafted rules are all examples of AI. Learning may be used in AI, but it is not required.
 
 <p align="center">
-  <img src="{{ '/assets/images/lecture12/image.png' | relative_url }}" alt="">
+  <img src="{{ '/assets/images/lecture12/1.png' | relative_url }}" alt="">
 </p>
 
-_Diagram of the relationship between Artificial Intelligence, Machine Learning, and Deep Learning. Adapted from AI hierarchy, Wikipedia, Wikimedia Commons,_ [_https://commons.wikimedia.org/wiki/File:AI_hierarchy.svg._](https://commons.wikimedia.org/wiki/File:AI_hierarchy.svg) _Licensed under CC BY-SA 4.0._
+_By Original file: Avimanyu786SVG version: Tukijaaliwa - File:AI-ML-DL.png, CC BY-SA 4.0,_ [_https://commons.wikimedia.org/w/index.php?curid=90131352_](https://commons.wikimedia.org/w/index.php?curid=90131352)
 
+[Machine Learning](https://en.wikipedia.org/wiki/Machine_learning) (ML) is a methodological approach in which systems learn _patterns_ or functions from data instead of being programmed with explicit rules. The central idea of ML is performance improvement through experience. Given examples, the system infers statistical regularities that allow it to make predictions or decisions on new data. Many ML systems perform narrow tasks such as regression, classification, clustering, or recommendation without reasoning, planning, or goal-directed behavior.
+
+[Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) (DL) is a specific class of ML methods based on [multi-layer neural networks](http://deeplearning.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/). DL is especially effective for perceptual tasks such as image recognition, speech processing, and natural language understanding because it can automatically learn features directly from raw inputs. DL is neither synonymous with intelligence nor with learning in general; it is a particular computational technique for large-scale [function approximation](https://en.wikipedia.org/wiki/Function_approximation) within ML.
 <div class="frame" markdown="1">
 
-**_Example._** Imagine an online clothing store that wants to show each customer personalized outfit suggestions. Instead of manually programming rules such as "if user clicks blue shirts → recommend jeans," the system collects thousands of users' behaviors: items they viewed, purchased, returned, or saved to wishlist.  
-Machine Learning models then discover patterns, for example, customers who prefer minimalistic styles often buy neutral-colored items. Deep Learning models can even analyze product images and understand patterns like "striped," "oversized," or "casual."  
-As a result, the AI system learns to automatically recommend items that match each person's style, even if no human explicitly defined the rules.
+**_Example._** Imagine an online clothing store that wants to show each customer personalized outfit suggestions. Instead of manually programming rules such as "if user clicks blue shirts, recommend jeans", the system can collect thousands of users' behaviors: items they viewed, purchased, returned, or saved to wishlist. ML models then discover patterns, for example, customers who prefer minimalistic styles often buy neutral-colored items. DL models can even analyze product images and understand patterns like "striped," "oversized," or "casual." As a result, the AI system learns to automatically recommend items that match each person's style, even if no human explicitly defined the rules.
 </div>
 
-### Linear Regression Algorithm
+## Linear Regression Algorithm
 
-Linear Regression is one of the simplest ML algorithms. It tries to model the relationship between two variables by finding a straight line that best fits the data. The goal is to predict an output y based on an input x using the function:
+<p align="center">
+  <img src="{{ '/assets/images/lecture12/5.png' | relative_url }}" alt="">
+</p>
 
-Where _m_ is the slope and _b_ is the intercept.
+[Linear Regression](https://mlu-explain.github.io/linear-regression/) is one of the simplest ML algorithms. We assume that there is a linear relationship between the observed data and the prediction we wish to make. In that case, we can model the relationship between two variables by finding a straight line that best fits the data. The goal is to predict an output _ŷ_ based on an input _x_ using the function: 
+$$
+\hat{y} = wx + b
+$$
 
-The algorithm adjusts _m_ and _b_ to minimize the difference between predicted and actual outputs. This difference is measured using "loss," commonly mean squared error.
-
+Where _x_ is the observed known input, _w_ is the weight (slope) and _b_ is the bias (intercept) of the function. The task of ML is to find the values of _w_ and _b_ that make the function's outputs match the [ground-truth](https://en.wikipedia.org/wiki/Ground_truth) value (label) as closely as possible. Learnable values of a function are called [model parameters](https://www.ibm.com/think/topics/model-parameters). For comparison, [GPT-3](https://en.wikipedia.org/wiki/GPT-3) model has 175 billion parameters, which were learned by training on a very large corpus of text collected from the World Wide Web and other publicly available sources.
 <div class="frame" markdown="1">
 
 **_Example._** Suppose a company wants to predict a student's final exam score based on the number of hours they studied. It collects real data from previous students:
 
-| Study Hours (x) | Final Score (y) |
-|------------------|------------------|
-| 2                | 55               |
-| 5                | 72               |
-| 7                | 82               |
-| 10               | 94               |
+| Study Hours ($x$) | Final Score ($y$) |
+| :--- | :--- |
+| 5 | 45 |
+| 10 | 55 |
+| 13 | 82 |
+| 20 | 94 |
 
+Let's say we provide random values for $w$ and $b$ to be $4.3$ and $12$. Then our model will make predictions according to the function:
 
-Linear Regression takes all these points and finds the single straight line that best fits the trend.  
-If the model returns:
+$$
+\hat{y} = 4.3x + 12
+$$
 
-y = 4.3x + 48
+Then a student who studies 19 hours is predicted to score:
 
-Then a student who studies 8 hours is predicted to score:
+$$
+4.3(19) + 12 = 93.7
+$$
 
-4.3(8) + 48 = 82.4
-
-This is useful in forecasting, budgeting, predicting energy consumption, and many other real-world applications.
-
+The function our model uses is close to reality: we haven't observed any student studying for $19$ hours before (we don't have it in our table), yet our model predicted a close performance similar to the observed student, who studied for $20$ hours with an observed ground-truth label of $94$ exam score.
 </div>
 
-### Artificial Neural Networks
+## Root Mean Squared Error (RMSE)
 
-Artificial Neural Networks (ANNs) are computing systems inspired by how biological neurons in the human brain process information. Just like real neurons send electrical signals to each other, artificial neurons pass numerical values forward through the network. The goal is to learn patterns inside data, such as images, sound, or text, and make accurate predictions.
+When training a ML model, we need a way to measure how well it is performing. This measurement is called the _loss_ or _error_, and it tells us how far our predictions are from the actual values. The goal of _training_ is to [minimize this loss](https://en.wikipedia.org/wiki/Loss_function). However, calculating error is not as simple as it might seem. Consider this problem with this example dataset:
 
-An ANN is made up of layers:
+| **Study Hours (x)** | **Actual Score \[label\] (y)** | **Predicted Score (ŷ)** | **Error (y - ŷ)** |
+| --- | --- | --- | --- |
+| 5   | 50  | 45  | 5   |
+| --- | --- | --- | --- |
+| 10  | 55  | 55  | 0   |
+| --- | --- | --- | --- |
+| 20  | 90  | 95  | \-5 |
+| --- | --- | --- | --- |
 
-- **Input Layer:**  
-    This is where the raw data enters the model. For image recognition, this layer receives pixel values; for language tasks, it might receive numerical representations of words.
-- **Hidden Layers:**  
-    These layers perform most of the computation. Each neuron applies a mathematical function to its inputs, producing an output that is passed to the next layer.  
-    Hidden layers allow the network to learn increasingly complex patterns.  
-    For example, an early hidden layer in an image model may detect simple edges, while deeper layers detect shapes, objects, or faces.
-- **Output Layer:**  
-    This layer produces the final result of the network, such as classifying an image as "cat" or "dog," predicting a number, or generating a sentence.
+We calculated individual errors of our predictions by simply subtracting predicted scores from ground-truth values to see how much our model's output diverge from reality. But how can we measure average quality of our model's predictive power? A simple approach is to find arithmetic mean: 
+$$
+(5 + 0 + (-5)) / 3 = 0
+$$
 
-Each connection between neurons has a **weight**, which acts like a strength value.
-
-- A large weight means the input strongly influences the next neuron.
-- A small weight means it has little effect.
-
-The network starts with random weights; during training, it repeatedly adjusts them to reduce errors. ANNs learn using an algorithm called **gradient descent**, which measures how far the model's prediction is from the correct answer and slightly changes the weights to improve accuracy. After many iterations, the network learns the correct patterns.
-
-This learning process is called **training**, and the correction of errors is done using a method called **backpropagation**, where the network works backward from the output to determine which weights need adjusting.
-
-After each neuron computes its weighted sum, it applies an **activation function**.  
-Activation functions introduce non-linearity, allowing the network to learn complex features rather than just straight-line relationships.
-
-Common activation functions include:
-
-- **ReLU (Rectified Linear Unit)** - outputs 0 for negative values and the value itself for positive ones. Very common in deep learning.
-- **Sigmoid** - outputs values between 0 and 1, often used in binary classification.
-- **Softmax** - converts outputs into probabilities for multiclass classification.
-
-Without activation functions, ANNs would behave like simple linear models and could not solve real-world problems.
+The mean error is zero, suggesting our model is perfect. But clearly, the model made errors on two predictions.The problem is that positive and negative errors cance cancel each other out.
 <div class="frame" markdown="1">
 
-**_Example:_** Suppose we want to identify handwritten numbers (0-9) from images-like how ATMs read digits on checks.
-
-**1)Input Layer**  
-Each image is converted into a grid of pixels (for example, 28×28 = 784 pixels).  
-These 784 values form the input layer.
-
-**2)Hidden Layers**
-
-• The first hidden layer detects low-level features like curves, dots, or strokes.
-
-• The second hidden layer might detect combinations of these features such as loops or corners.
-
-• Deeper layers start detecting digit-specific patterns (for example, the circular shape of "0" or the straight vertical line of "1").
-
-**3)Output Layer**  
-
-The network has 10 output neurons, one for each digit.  
-The neuron with the highest probability is the network's prediction.
-
-Example Output for an input image:
-
-| Digit | Probability |
-|-------|-------------|
-| 0     | 0.01        |
-| 1     | 0.02        |
-| 2     | 0.01        |
-| 3     | 0.00        |
-| 4     | 0.01        |
-| 5     | 0.10        |
-| 6     | 0.82        |
-| 7     | 0.01        |
-| 8     | 0.01        |
-| 9     | 0.01        |
-
-
+**_Exercise._** How would you avoid negative values cancelling each others out during averaging?
 </div>
 
-### Large Language Models (LLMs)
+To avoid this cancellation problem, we can take the absolute value of each error before averaging. [Mean Absolute Error (MAE)](https://en.wikipedia.org/wiki/Mean_absolute_error) will have the following solution:
 
-Large Language Models (LLMs), such as GPT-based systems, are advanced deep learning models trained on extremely large collections of text. Through this training, they learn statistical patterns in how words, sentences, and ideas relate to each other. Because of this, they can generate coherent text, answer questions, summarize long documents, translate between languages, and even write computer code. These abilities come from recognizing patterns across billions of examples, rather than being explicitly programmed with rules.
+$$
+MAE = (5 + 0 + |-5|) / 3 = 10 / 3 = 3.33
+$$
 
-LLMs are built using a special neural network architecture called the Transformer. The key component of this architecture is the attention mechanism, which allows the model to focus on the most important parts of the input while processing it. Instead of reading text strictly from left to right, Transformers can look at all parts of a sentence at once and determine which words influence each other the most. This ability to capture long-distance relationships makes LLMs highly effective at understanding context, generating meaningful responses, and producing human-like language.
+This is better because now we don't hide errors through cancellation. However, MAE treats all errors equally. A 10-point error and a 2-point error contribute proportionally to the total loss. To penalize large errors more heavily, we can square each error before averaging. [Mean Squared Error (MSE)](https://en.wikipedia.org/wiki/Mean_squared_error) will have the following solution:
+
+$$
+MSE = (5² + 0² + (-5)²) / 3 = (25 + 0 + 25) / 3 = 16.67
+$$
+
+By squaring, large errors become disproportionately larger: an error of 2 becomes 4 (doubled), an error of 10 becomes 100 (10× larger). This encourages the model to avoid making big mistakes. A problem with MSE, however, is that the units are squared. If we are predicting "scores", MSE gives us "scores²", which is not intuitive. To bring the error back to the original units, we take the square root: [Root Mean Squared Error (RMSE)](https://en.wikipedia.org/wiki/Root_mean_square_deviation) will have the following solution:
+
+$$
+RMSE = √MSE = √16.67 = 4.08
+$$
+
+Now our error is back in the original units, making it easier to interpret.
+
+## Artificial Neural Networks
+
+[Artificial Neural Networks (ANNs)](https://en.wikipedia.org/wiki/Neural_network_%28machine_learning%29) are inspired by how biological neurons in the human brain process information. Just like real neurons fire (get activated) and send electrical signals to the connected neurons, artificial neurons pass numerical values forward through the network.
+
+<p align="center">
+  <img src="{{ '/assets/images/lecture12/4.png' | relative_url }}" alt="">
+</p>
+
+_Structure of a typical neuron with_ [_Schwann cells_](https://en.wikipedia.org/wiki/Schwann_cell) _in the_ [_peripheral nervous system_](https://en.wikipedia.org/wiki/Peripheral_nervous_system) _(source: "Anatomy and Physiology" by the US National Cancer Institute's Surveillance / [_CC BY-SA 3.0_](http://creativecommons.org/licenses/by-sa/3.0/)[_Wikimedia Commons_](https://commons.wikimedia.org/wiki/File:Neuron.svg#/media/File:Neuron.svg)_)_
+
+To understand neural networks, it is helpful to start with a single neuron. An artificial neuron is a simple mathematical function. It takes one or more input values, multiplies each input by a corresponding weight, adds a bias, and produces an output. In its basic form, this is exactly an linear function with _n_ inputs (e.g. is study hours, is amount of sleep, etc).
+
+$$
+z = w_1x_1 + w_2x_2 + \dots + w_nx_n + b
+$$
+
+This linear combination is then passed through a _nonlinear function_ called an [activation function](https://en.wikipedia.org/wiki/Activation_function). For example, using the [logistic (sigmoid) function](https://en.wikipedia.org/wiki/Sigmoid_function), the final prediction of the neuron is:
+
+$$
+\hat{y} = \frac{1}{1 + e^{-z}}
+$$
+
+Note that we only did one additional step. Without the sigmoid function, our predictions would be based on a linear formula. We simply assume that our data complicated has a non-linear relationship between its inputs and output. It can also be noted that as the output of the linear function _z_ approaches positive infinity, our prediction will approach 1, and in case of negative infinity, 0. Hence, sigmoid function is limited to be in the range of \[0,1\] making our prediction [probabilistic](https://en.wikipedia.org/wiki/Probability_theory).
+
+<p align="center">
+  <img src="{{ '/assets/images/lecture12/3.png' | relative_url }}" alt="">
+</p>
+
+Funcs - Own work ([CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=148910507))
+
+<p align="center">
+  <img src="{{ '/assets/images/lecture12/2.png' | relative_url }}" alt="">
+</p>
+
+By Glosser.ca - Own work, Derivative of File:Artificial neural network.svg, CC BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=24913461>
+
+Neural network is simply a collection (network) of such neurons. In its simplest form, [multilayer perceptron](https://en.wikipedia.org/wiki/Multilayer_perceptron) is when an output of one neuron is an input of a neuron in the next layer. In the figure, the described neural network has three layers with nine neurons in total, where the output layer neurons make two predictions (e.g. probability of seeing a "cat", as well as a "dog" in the provided input image.
+<div class="frame" markdown="1">
+
+**_Example:_** Suppose we want to identify handwritten numbers (0–9) from images. The network has 10 output neurons, one for each digit. The neuron with the highest probability is the network's prediction.
+
+| Digit | Probability |
+| :--- | :--- |
+| 0 | 0.01 |
+| 1 | 0.02 |
+| 2 | 0.01 |
+| 3 | 0.00 |
+| 4 | 0.01 |
+| 5 | 0.10 |
+| 6 | 0.82 |
+| 7 | 0.01 |
+| 8 | 0.01 |
+| 9 | 0.01 |
+
+The model predicts the image is a 6 with 82% confidence.
+</div>
+
+## Matrix Multiplication
+
+[Matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication) is one of the most important mathematical operations in ML/DL because it is the basic way neural networks process and transform information. A matrix is simply a rectangular grid of numbers, and multiplying two matrices means combining the rows of the first matrix with the columns of the second to produce new values. In a neural network, every layer uses matrices to store the weights that connect one layer of neurons to the next. When data flows through the network, the input values are represented as a vector, and this vector is multiplied by the weight matrix of the layer. The result of this multiplication is a new vector that represents the layer's output.
+
+All of these transformations, often millions of them in a single deep network, depend on matrix multiplication. Because neural networks require so many large matrix operations, hardware that can perform [parallel computation](https://en.wikipedia.org/wiki/Parallel_computing) is extremely valuable. This is why [Graphical Processing Units (GPU)](https://en.wikipedia.org/wiki/Graphics_processing_unit) are widely used in ML/DL. Unlike CPUs, which process information sequentially, GPUs can perform thousands of small multiplications at the same time, making them ideal for the heavy matrix workloads found in modern AI systems.
+<div class="frame" markdown="1">
+
+**_Example_.** Suppose an image classifier needs to determine whether an image contains a cat or a dog. Each image is converted into a vector (list of numbers). If the input image has three _features_ (simplified for explanation):
+
+$$
+X = \begin{bmatrix} 
+0.2 \\ 
+0.9 \\ 
+0.4 
+\end{bmatrix}
+$$
+
+And the neural network layer has 3 neurons with weights:
+
+$$
+W = \begin{bmatrix} 
+0.5 & 0.2 & 0.1 \\ 
+0.9 & 0.3 & 0.5 \\ 
+0.1 & 0.8 & 0.6 
+\end{bmatrix}
+$$
+
+Then the output is simply:
+
+$$
+W \times X = \begin{bmatrix} 
+0.5(0.2) + 0.2(0.9) + 0.1(0.4) \\ 
+0.9(0.2) + 0.3(0.9) + 0.5(0.4) \\ 
+0.1(0.2) + 0.8(0.9) + 0.6(0.4) 
+\end{bmatrix}
+$$
+
+The first neuron output: $0.1 + 0.18 + 0.04 = 0.32$  
+The second neuron output: $0.18 + 0.27 + 0.20 = 0.65$  
+The third neuron output: $0.02 + 0.72 + 0.24 = 0.98$
+
+So the final output vector is:
+
+$$
+Y = \begin{bmatrix} 
+0.32 \\ 
+0.65 \\ 
+0.98 
+\end{bmatrix}
+$$
+
+These resulting numbers feed into activation functions and ultimately decide probability it is a cat or a dog. This multiplication happens millions of times per second, which is why GPUs are essential.
+</div>
+
+## Large Language Models (LLM)
+
+[Large Language Models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model), such as GPT-based systems, are advanced deep learning models trained on extremely large collections of text. Through this training, they learn statistical patterns in how words, sentences, etc. relate to each other. Because of this, they can generate coherent text, answer questions, summarize long documents, translate between languages, and even write computer code. These abilities come from recognizing patterns across billions of examples, rather than being explicitly programmed with rules.
+
+LLMs are built using a special neural network architecture called the [Transformer](https://en.wikipedia.org/wiki/Transformer_%28deep_learning%29). The key component of this architecture is the attention mechanism, which enables the model to process all parts of the input in parallel. Instead of reading text sequentially from left to right, the model considers the entire sentences at once and computes how strongly each word is related to every other word. Because all words are processed simultaneously, transformers can efficiently model long-range dependencies without relying on step-by-step recurrence. This parallel structure makes training much faster on modern hardware and allows the model to capture relationships between distant words that would be difficult to retain in sequential models. As a result, large language models can represent _context_ more accurately and generate coherent, context-aware text over long sequences.
 <div class="frame" markdown="1">
 
 **_Example._** Consider a customer service chatbot for an internet provider. Customers commonly ask: "My Wi-Fi is slow.", "Why is my internet disconnecting?", "How do I change my password?"
@@ -176,91 +258,25 @@ The company trains an LLM on:
 
 • internal support responses
 
-When a customer types:
+When a customer types: "My internet randomly disconnects every hour", the sentence is first converted into a sequence of numerical vectors called [token embeddings](https://platform.openai.com/tokenizer). Each token (such as internet, disconnects, hour) is represented as a high-dimensional [vector](https://en.wikipedia.org/wiki/Vector) (list of numbers).
 
-**"My internet randomly disconnects every hour."**
+These vectors are then processed in parallel by multiple attention layers. In each layer, the model computes how strongly every token relates to every other token using [matrix](https://en.wikipedia.org/wiki/Matrix_%28mathematics%29) operations. For example, the token disconnects may receive high attention weights from internet and hour, indicating a meaningful statistical relationship learned during training.
 
-The LLM analyzes the sentence, identifies key patterns, and generates a tailored response such as:
-
-_"Frequent disconnections often happen due to outdated router firmware or signal interference. Let's first check if your router needs an update…"_
-
-The model understands intent, context, and writes grammatically correct answers.  
-This is possible because LLMs learn relationships between billions of words during training.
-
+Finally, based on these transformed representations, the model computes a [probability distribution](https://en.wikipedia.org/wiki/Probability_distribution) over the next possible words and generates a response token by token. The output appears coherent because the model has learned, from large-scale text data, which word sequences are _statistically likely_ to follow similar inputs.
 </div>
 
-### Matrix Multiplication
+Nowadays, AI is often treated as synonymous with neural network-based models (deep learning). This identification is misleading. DL is a powerful tool within AI, not a definition of AI itself. Long before neural networks dominated the field, many AI systems were built using symbolic reasoning, search, and optimization methods that involve no learning from data at all.
 
-[_Matrix multiplication_](https://en.wikipedia.org/wiki/Matrix_multiplication) is one of the most important mathematical operations in machine learning because it is the basic way neural networks process and transform information. A matrix is simply a rectangular grid of numbers, and multiplying two matrices means combining the rows of the first matrix with the columns of the second to produce new values. In a neural network, every layer uses matrices to store the weights that connect one layer of neurons to the next. When data flows through the network, the input values are represented as a vector, and this vector is multiplied by the weight matrix of the layer. The result of this multiplication is a new vector that represents the layer's output.
+Examples include _constraint satisfaction problems (CSPs),_ where the goal is to find assignments that satisfy a set of logical constraints; _minimax search_, used in game-playing agents to choose optimal moves by exploring possible future states; and _reinforcement learning methods_ (such as _Q-learning_), which learn action values through interaction with an _environment_ without relying on deep neural networks. These approaches remain central to AI and are still widely used in planning, scheduling, verification, and control.
 
-This operation is not symbolic, it directly represents how strongly each input influences each neuron in the next layer. Each row of the weight matrix corresponds to a single neuron in the output layer, and each column corresponds to a single input. During multiplication, the network takes a weighted sum of all inputs for each neuron. This weighted combination is what allows the network to detect patterns. For example, one neuron might respond more strongly to curved shapes in an image, another to vertical edges, and another to color differences. These responses come directly from the values stored in the weight matrix and the multiplication that combines them with the input data.
+CSP Backtracking Algorithm
 
-To see this more concretely, imagine a layer that receives three input values and produces two output values. The weights of this layer can be represented as a 2×3 matrix, and the input is a 3×1 vector. When we multiply the weight matrix by the input vector, we get a 2×1 vector. Each of the two resulting numbers represents how much one output neuron "fires" after combining and weighting the three inputs. This is how neural networks perform their forward pass: data enters, gets multiplied by weight matrices, transformed by activation functions, and passed layer by layer until the final prediction is produced.
+[Constraint Satisfaction Problems (CSPs)](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem) require assigning values to a set of variables in a way that satisfies all given rules. Each variable has a domain of possible values, and constraints specify which combinations of assignments are allowed. [Backtracking](https://en.wikipedia.org/wiki/Backtracking) is a systematic method for exploring all possible assignments. It works by choosing a variable, assigning it a value, and immediately checking whether this partial assignment violates any constraints. If the assignment is still valid, the algorithm moves to the next variable. If a violation appears at any point, the algorithm reverses its last step, removes the invalid value, and tries a different one.
 
-All of these transformations, often millions of them in a single deep network, depend on matrix multiplication. Because neural networks require so many large matrix operations, hardware that can perform parallel computation is extremely valuable. This is why GPUs (graphics processing units) are widely used in AI. Unlike CPUs, which process information sequentially, GPUs can perform thousands of small multiplications at the same time, making them ideal for the heavy matrix workloads found in modern AI systems.
+This process continues until either a complete valid assignment is found or all options have been exhausted. Backtracking is efficient because it avoids exploring entire branches of the _search space_ as soon as a conflict is detected, instead of waiting until the end.
 <div class="frame" markdown="1">
 
-**_Example_.** Suppose an image classifier needs to determine whether an image contains a cat or a dog. Each image is converted into a vector (list of numbers).
-
-If the input image has **3 features** (simplified for explanation):
-
-⎡ 0.2 ⎤
-
-X =⎢ 0.9 ⎥
-
-⎣ 0.4 ⎦
-
-And the neural network layer has 3 neurons with weights:
-
-⎡ 0.5 0.2 0.1 ⎤
-
-W=⎢ 0.9 0.3 0.5 ⎥
-
-⎣ 0.1 0.8 0.6 ⎦
-
-Then the output is simply:
-
-W×X =⎡0.5(0.2) + 0.2(0.9) + 0.1(0.4)⎤
-
-⎢0.9(0.2) + 0.3(0.9) + 0.5(0.4)⎥
-
-⎣0.1(0.2) + 0.8(0.9) + 0.6(0.4)⎦
-
-Now calculate each row:
-
-1) First neuron output:
-
-2) Second neuron output:
-
-3) Third neuron output:
-
-So the final output vector is:
-
-⎡ 0.32 ⎤
-
-WX =⎢ 0.65 ⎥
-
-⎣ 0.98 ⎦
-
-These resulting numbers feed into activation functions and ultimately decide:
-
-• Probability it is a cat
-
-• Probability it is a dog
-
-This multiplication happens **millions of times per second**, which is why GPUs are essential.
-</div>
-
-### CSP Backtracking Algorithm
-
-Constraint Satisfaction Problems (CSPs) require assigning values to a set of variables in a way that satisfies all given rules. Each variable has a domain of possible values, and constraints specify which combinations of assignments are allowed. Backtracking is a systematic method for exploring all possible assignments. It works by choosing a variable, assigning it a value, and immediately checking whether this partial assignment violates any constraints. If the assignment is still valid, the algorithm moves to the next variable. If a violation appears at any point, the algorithm reverses its last step, removes the invalid value, and tries a different one.
-
-This process continues until either a complete valid assignment is found or all options have been exhausted. Backtracking is efficient because it avoids exploring entire branches of the search space as soon as a conflict is detected, instead of waiting until the end. In Sudoku, for example, the algorithm fills a cell with a possible number and checks whether the number appears in the same row, column, or 3×3 block. If it does, the number is rejected and another one is tried. If all numbers fail for that cell, the algorithm backtracks to the previous cell and chooses a new value there. The same logic applies to other CSPs like scheduling, where time slots act as domains and conflicts occur when two tasks overlap or violate ordering rules.
-<div class="frame" markdown="1">
-
-**_Example_.** Sudoku Solver:
-
-Consider the classic Sudoku puzzle. Each empty cell must contain a number from 1-9 such that:
+**_Example_.** Consider the classic Sudoku puzzle. Each empty cell must contain a number from 1-9 such that:
 
 • No duplicate in the same row
 
@@ -283,31 +299,24 @@ Backtracking works like this:
 This continues until the puzzle is complete. This same method is used in timetabling at universities, resource allocation, map coloring, and validating exam seating plans.
 </div>
 
-### Minimax Algorithm
+## Minimax Algorithm
 
-Minimax is an algorithm used in two-player, turn-based games where players take actions one after another, such as tic-tac-toe, chess, or checkers. The main idea is that one player is trying to choose moves that **maximize** their chance of winning, while the opponent is assumed to choose moves that **minimize** that chance. To decide the best move, the algorithm looks ahead at all possible future game states by simulating every move the player could make, every response the opponent could make, and so on. Each final outcome (win, loss, draw) is given a numerical score. Wins receive positive scores, losses receive negative scores, and draws get a neutral score.
+[Minimax](https://en.wikipedia.org/wiki/Minimax) is an algorithm used in two-player, turn-based games where players take actions one after another, such as tic-tac-toe, chess, or checkers. The main idea is that one player is trying to choose moves that _maximize_ their chance of winning, while the opponent is assumed to choose moves that _minimize_ that chance. To decide the best move, the algorithm looks ahead at all possible future game states by simulating every move the player could make, every response the opponent could make, and so on. Each final outcome (win, loss, draw) is given a numerical score. Wins receive positive scores, losses receive negative scores, and draws get a neutral score.
 
-Once all these possible future outcomes are evaluated, the algorithm works backward through the game tree. At layers where it is our turn, Minimax selects the move that leads to the **highest** possible score. At layers where the opponent moves, the algorithm assumes the opponent will choose the option that gives **us** the **lowest** score. Following this alternating pattern of maximizing and minimizing ensures that the chosen move is the one that guarantees the best possible outcome even if the opponent plays perfectly.
-
-This is why Minimax is so powerful in simple games: it prevents mistakes caused by only considering the next move. Instead of thinking "what is good right now?", the algorithm considers the full consequences of every action. In tic-tac-toe, for example, Minimax ensures the AI never loses because it checks all possible responses and avoids any move that could lead to a future losing position.
+Once all these possible future outcomes are evaluated, the algorithm works backward through the game tree. At layers where it is our turn, Minimax selects the move that leads to the highest possible score. At layers where the opponent moves, the algorithm assumes the opponent will choose the option that gives us the lowest score. Following this alternating pattern of maximizing and minimizing ensures that the chosen move is the one that guarantees the best possible outcome even if the opponent plays perfectly.
 <div class="frame" markdown="1">
 
-**_Example_.** **Tic-Tac-Toe with Full Search  
-**Assume it is the AI's turn and the board is:
+**_Example_.** Assume it is the AI's turn and the board is following for tic-tac-toe:
 
-| X | O | X |
-|---|---|---|
-| O | X |   |
-|   |   | O |
+```text
+ X | O | X 
+-----------
+ O | X |   
+-----------
+   |   | O
+```   
 
-
-The AI (playing "X") considers every possible move:
-
-• If it plays in the bottom-left corner, what are all the opponent's replies?
-
-• If it plays in the middle-right cell, does it allow the opponent to win?
-
-• If it plays incorrectly, does it allow a future fork?
+The AI (playing "X") considers every possible move. If it plays in the bottom-left corner, what are all the opponent's replies? If it plays in the middle-right cell, does it allow the opponent to win? If it plays incorrectly, does it allow a future fork?
 
 Minimax will:
 
@@ -318,13 +327,13 @@ Minimax will:
 • Assign **-1** if it leads to a forced loss
 
 The AI compares the scores of all possible futures. If the opponent can force a win, Minimax will avoid that move. This ensures the AI never loses, even against a perfect human player.
-
-Chess engines, Othello, Connect-4, and even some negotiation bots in economics use this principle.
 </div>
 
-### Reinforcement Learning (RL)
+Chess engines, Connect-4, and even some negotiation bots in economics use this principle. The highest rated and open-source chess engine [Stockfish](https://stockfishchess.org/) uses an advanced minimax search (now also combined with a neural network after its loss to [AlphaZero](https://en.wikipedia.org/wiki/AlphaZero)).
 
-Reinforcement Learning is a branch of AI in which a system, called an agent, learns how to behave by interacting with an environment rather than by being shown the correct answers. The agent chooses an action, observes what happens as a result, and receives feedback in the form of a numerical reward or penalty. Good actions lead to positive rewards, while harmful or ineffective actions lead to negative ones. Over time, by repeatedly trying different actions and observing their consequences, the agent gradually learns which behaviors produce the highest long-term benefit. This learning process does not rely on explicit instructions. Instead, the agent discovers the best strategy on its own by balancing exploration of new actions with exploitation of actions that have worked well in the past.
+## Reinforcement Learning
+
+[Reinforcement Learning](https://en.wikipedia.org/wiki/Reinforcement_learning) (RL) is a branch of AI in which a system, called an agent, learns how to behave by interacting with an environment rather than by being shown the correct answers. The agent chooses an action, observes what happens as a result, and receives feedback in the form of a numerical reward or penalty. Good actions lead to positive rewards, while harmful or ineffective actions lead to negative ones. Over time, by repeatedly trying different actions and observing their consequences, the agent gradually learns which behaviors produce the highest long-term benefit. This learning process does not rely on explicit instructions. Instead, the agent discovers the best strategy on its own by balancing exploration of new actions with exploitation of actions that have worked well in the past.
 
 Key Concepts:
 
@@ -333,30 +342,31 @@ Key Concepts:
 - **Action** - something the agent chooses to do
 - **Reward** - numerical feedback (positive or negative)
 - **Policy** - the strategy the agent learns
-
 <div class="frame" markdown="1">
 
-**_Example_.** Imagine training a robot to walk. At first, the robot moves randomly because it does not know what actions are helpful. It might take a step and fall, which produces a penalty, or it might shift its weight successfully and stay upright, which produces a reward. As these interactions continue, the robot begins to understand which sequences of movements keep it balanced and which cause it to fall. Eventually, after enough trial and error, the robot develops a stable walking pattern simply because that pattern consistently leads to higher rewards than others. In this way, Reinforcement Learning enables systems to learn complex behaviors directly from experience rather than from predefined rules.Additional Material
+**_Example_.** Imagine training a robot to walk. At first, the robot moves randomly because it does not know what actions are helpful. It might take a step and fall, which produces a penalty, or it might shift its weight successfully and stay upright, which produces a reward. As these interactions continue, the robot begins to understand which sequences of movements keep it balanced and which cause it to fall. Eventually, after enough trial and error, the robot develops a stable walking pattern simply because that pattern consistently leads to higher rewards than others. In this way, RL enables systems to learn complex behaviors directly from experience rather than from predefined rules.
 </div>
 
-###  Additional Materials
+## Additional Materials
 
 - [Linear Regression](https://mlu-explain.github.io/linear-regression/)
 - [TensorFlow Playground](https://playground.tensorflow.org/)
 - [TensorSpace Playground](https://tensorspace.org/html/playground/index.html)
 - [Tiktokenizer](https://tiktokenizer.vercel.app/)
+- [But what is a neural network? Deep learning chapter 1](https://www.youtube.com/watch?v=aircAruvnKk)
 - [Machine Learning Explained in 100 Seconds](https://www.youtube.com/watch?v=PeMlggyqz0Y)
-- [But what is a neural network?  Deep learning chapter 1](https://www.youtube.com/watch?v=aircAruvnKk)
 - [Linear Regression in 3 Minutes](https://www.youtube.com/watch?v=3dhcmeOTZ_Q)
 - [AI vs ML vs DL vs Data Science - Difference Explained Simplilearn](https://www.youtube.com/watch?v=vNc2z2u_nh0)
 - [N-Queens - Backtracking - Leetcode 51 - Python](https://www.youtube.com/watch?v=Ph95IHmRp5M)
 - [Minimax: How Computers Play Games](https://www.youtube.com/watch?v=SLgZhpDsrfc)
-- [Matrix multiplication as composition  Chapter 4, Essence of linear algebra](https://www.youtube.com/watch?v=XkY2DOUCWMU)  
-- [Multiplying a matrix by a matrix Matrices Precalculus Khan Academy](https://www.youtube.com/watch?v=OMA2Mwo0aZg)
-- [Reinforcement Learning: Essential Concepts](https://www.youtube.com/watch?v=Z-T0iJEXiwM)
+- [Matrix multiplication as composition Chapter 4, Essence of linear algebra](https://www.youtube.com/watch?v=XkY2DOUCWMU)
+- [Multiplying a matrix by a matrix Khan Academy](https://www.youtube.com/watch?v=OMA2Mwo0aZg)
 - [Large Language Models explained briefly](https://www.youtube.com/watch?v=LPZh9BOjkQs)
 - [How I use LLMs](https://www.youtube.com/watch?v=EWvNQjAaOHw)
 - [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI)
 - [Machine Learning Fundamentals: Bias and Variance](https://www.youtube.com/watch?v=EuBBz3bI-aA)
+- [How Cambridge Analytica Exploited the Facebook Data of Millions NYT](https://www.youtube.com/watch?v=mrnXv-g4yKU)
+- [AlphaGo - The Movie Full award-winning documentary](https://www.youtube.com/watch?v=WXuK6gekU1Y)
+- [AI Learns to Play Soccer (and breaks physics)](https://www.youtube.com/watch?v=ta99S6Fh53c)
 
 {% include lecture-footer.html %}

@@ -1,6 +1,7 @@
 ---
 layout: page
-permalink: /communication
+title: Communication Rules
+permalink: /communication/
 ---
 
 <style>
@@ -9,7 +10,6 @@ permalink: /communication
     }
 </style>
 
-# Communication Rules
 
 As the course is massive with hundreds of students, you are expected follow the communication rules throughout the semester. There are two options to communicate with instructors: 1) via virtual office hours on the course blackboard page, 2) via email.
 
