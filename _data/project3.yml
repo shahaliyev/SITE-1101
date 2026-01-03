@@ -1,0 +1,23 @@
+- team: "Cyberpunk 2026"
+  rank: 1
+  video_id: "tgbNymZ7vqY"
+  members: "Leyla, Farid, Elvin"
+  desc: "Full-stack e-commerce platform with payment integration."
+
+- team: "The Frontend Wizards"
+  rank: 2
+  video_id: "jNQXAC9IVRw"
+  members: "Leyla, Farid, Elvin"
+  desc: "Beautiful UI/UX using React and Tailwind."
+
+- team: "Backend Battalion"
+  rank: 3
+  video_id: "dQw4w9WgXcQ"
+  members: "Leyla, Farid, Elvin"
+  desc: "Robust API security and authentication system."
+
+- team: "Full Stack Squad"
+  rank: 4
+  video_id: "LXb3EKWsInQ"
+  members: "Leyla, Farid, Elvin"
+  desc: "Seamless integration between client and server."

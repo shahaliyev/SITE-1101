@@ -36,8 +36,8 @@ The course provides a general overview of what SITE students of the [ADA Univers
 
 ## Instructors & Teaching Assistants (Fall 2025)
 
-**Instuctors** | [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev) | Rumiyya Alili
-**Teaching Assistants** | [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) | Nilufar Ismayilova | [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b)
+**Instuctors** | [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev) | [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili)
+**Teaching Assistants** | [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) | [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2) | [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b)
 
 ## Schedule
 

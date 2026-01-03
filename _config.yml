@@ -10,7 +10,6 @@ theme: minima
 # Top navigation menu
 header_pages:
   - lecture-notes.md
-  - leaderboard.md
   - communication.md
   
 collections:

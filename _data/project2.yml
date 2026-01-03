@@ -1,0 +1,23 @@
+- team: "Team Red: SQL Masters"
+  rank: 1
+  video_id: "dQw4w9WgXcQ"
+  members: "Nigar, Orkhan, Samir"
+  desc: "Complex schema design with zero redundancy."
+
+- team: "Team Blue: Query Kings"
+  rank: 2
+  video_id: "LXb3EKWsInQ"
+  members: "Nigar, Orkhan, Samir"
+  desc: "Optimized indexing strategy for fast lookups."
+
+- team: "Team Green: Normalizers"
+  rank: 3
+  video_id: "tgbNymZ7vqY"
+  members: "Nigar, Orkhan, Samir"
+  desc: "A perfect example of 3rd Normal Form."
+
+- team: "Team Yellow: Architects"
+  rank: 4
+  video_id: "jNQXAC9IVRw"
+  members: "Nigar, Orkhan, Samir"
+  desc: "Innovative use of foreign keys."
