@@ -1,29 +1,23 @@
 - team: "Team 1: Alpha"
   rank: 1
   video_id: "LXb3EKWsInQ"
+  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
   desc: "Outstanding editing and narration."
 
 - team: "Team 5: Omega"
   rank: 2
   video_id: "dQw4w9WgXcQ"
+  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
   desc: "Great use of animations."
 
 - team: "Team 3: Delta"
   rank: 3
   video_id: "tgbNymZ7vqY"
+  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
   desc: "Deep technical analysis."
 
 - team: "Team 7: Gamma"
   rank: 4
   video_id: "jNQXAC9IVRw"
+  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
   desc: "Creative storytelling."
-
-- team: "Team 2: Beta"
-  rank: 5
-  video_id: "LXb3EKWsInQ"
-  desc: "Good effort on research."
-
-- team: "Team 6: Zeta"
-  rank: 6
-  video_id: "dQw4w9WgXcQ"
-  desc: "Interesting interview approach."
