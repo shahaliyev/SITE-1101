@@ -36,7 +36,7 @@ The course provides a general overview of what SITE students of the [ADA Univers
 
 ## Fall 2025
 
-This website is launched at the end of the Fall 2025 semester with the efforts of our great Teaching Assistants [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2), [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) (see [Lecture Notes](/lectures)), and [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b) (Website), as well as the guidance of the course instructors [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili) and [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev).
+This website was launched at the end of the Fall 2025 semester with the efforts of our great Teaching Assistants [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2), [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) (see [Lecture Notes](/lectures)), and [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b) (Website), as well as the guidance of the course instructors [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili) and [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev).
 
 ## Schedule
 
