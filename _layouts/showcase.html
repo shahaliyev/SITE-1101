@@ -41,13 +41,19 @@ layout: default
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;
   }
   .card-content { padding: 1.2rem; text-align: left; }
-  .team-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: #222; }
+  .team-name { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; color: #333; line-height: 1.4; }
   .team-members { font-size: 0.85rem; color: #666; margin-bottom: 8px; font-style: italic; }
   .project-desc { font-size: 0.9rem; color: #666; line-height: 1.4; }
+  .intro {
+    margin-bottom: 2rem;
+  }
+  .intro p {
+    margin: 0;
+  }
 </style>
 
 <div class="intro">
-  <p>{{ page.description }}</p>
+  <p>{{ page.description | markdownify }}</p>
 </div>
 
 <div class="showcase-grid">
@@ -55,24 +61,34 @@ layout: default
   {% assign projects = site.data[page.data_file] %}
 
   {% for project in projects %}
-    <div class="project-card">
-      <div class="video-placeholder" data-id="{{ project.video_id }}">
-        <img src="https://img.youtube.com/vi/{{ project.video_id }}/maxresdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button"></div>
-      </div>
+    {% comment %} Extract team number from team string if not explicitly provided {% endcomment %}
+    {% if project.team_number %}
+      {% assign team_num = project.team_number %}
+    {% else %}
+      {% assign team_parts = project.team | split: ':' %}
+      {% if team_parts.size > 1 %}
+        {% assign team_num = team_parts[0] | replace: 'Team', '' | strip %}
+      {% else %}
+        {% assign team_num = '' %}
+      {% endif %}
+    {% endif %}
 
-      <div class="card-content">
-        <div class="team-name">{{ project.team }}</div>
-        
-        {% if project.members %}
-        <div class="team-members">
-          <span style="font-weight: 600; color: #444;">Team:</span> {{ project.members }}
-        </div>
-        {% endif %}
+    {% comment %} Extract team name if available {% endcomment %}
+    {% if project.team_name %}
+      {% assign team_name = project.team_name %}
+    {% elsif project.team contains ':' %}
+      {% assign team_parts = project.team | split: ':' %}
+      {% assign team_name = team_parts[1] | strip %}
+    {% else %}
+      {% assign team_name = '' %}
+    {% endif %}
 
-        <div class="project-desc">{{ project.desc }}</div>
-      </div>
-    </div>
+    {% include video-block.html 
+       video_url=project.video_url
+       team_number=team_num
+       team_name=team_name
+       members=project.members 
+       semester=project.semester %}
   {% endfor %}
 </div>
 

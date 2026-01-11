@@ -1,7 +1,6 @@
 ---
-layout: showcase
+layout: coming-soon
 title: "Project 2"
 permalink: /projects/2/
-data_file: project2
-description: "Welcome to Project 2. These projects are more advanced."
+description: "This project page is coming soon. Check back later for updates!"
 ---

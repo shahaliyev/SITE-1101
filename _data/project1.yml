@@ -1,23 +1,29 @@
-- team: "Team 1: Alpha"
-  rank: 1
-  video_id: "LXb3EKWsInQ"
-  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
-  desc: "Outstanding editing and narration."
+- team: "Team 30"
+  team_number: "30"
+  team_name: ""
+  video_url: "https://www.youtube.com/watch?v=R4JpSgKWO1g"
+  members: "Suat Hamzali, Arif Badalov, Mahammad Sheykhov, Shakir Badalzade"
+  semester: "Fall 2025"
 
-- team: "Team 5: Omega"
-  rank: 2
-  video_id: "dQw4w9WgXcQ"
-  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
-  desc: "Great use of animations."
 
-- team: "Team 3: Delta"
-  rank: 3
-  video_id: "tgbNymZ7vqY"
-  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
-  desc: "Deep technical analysis."
+- team: "Team 18"
+  team_number: "18"
+  team_name: ""
+  video_url: "https://www.youtube.com/watch?v=HMqk8mzw3Ew"
+  members: "Aliyyiakbar Shirinli, Kamal Badalzada, Sonakhanim Dadashova, Zeynab Ajalova"
+  semester: "Fall 2025"
 
-- team: "Team 7: Gamma"
-  rank: 4
-  video_id: "jNQXAC9IVRw"
-  members: "Ali, Aysel, Murad"  # <--- ADD THIS LINE
-  desc: "Creative storytelling."
+- team: "Team 14"
+  team_number: "14"
+  team_name: ""
+  video_url: "https://www.youtube.com/watch?v=tUaShLm9sbU"
+  members: "Hamayil Mammadova, Ilaha Mikayilova, Nihad Alakbarli, Shahin Guliyev"
+  semester: "Fall 2025"
+
+- team: "Team 81"
+  team_number: "81"
+  team_name: ""
+  video_url: "https://www.youtube.com/watch?v=YocZhnFFCuc"
+  members: "Huseyn Huseynzada, Gulnar Feyzullayeva, Kamran Gafarli, Gulu Guseinov"
+  semester: "Fall 2025"
+
