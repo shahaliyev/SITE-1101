@@ -1,15 +1,19 @@
 ---
 layout: page
-title: Week 06-07 — Programming & Software
+title: Programming & Software
 order: 4
+week: [6, 7]
+authors: "Rahida Asadli, Ismayil Shahaliyev"
+created: "Nov 9 2025"
+updated: "Dec 20 2025"
 ---
+
 {% include lecture-styles.html %}
 
-**Authors:** Rahida Asadli, Ismayil Shahaliyev
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Nov 9 2025 **/** Dec 20 2025
+<!-- {% include reading-time.html %}
 
-{% include reading-time.html %}
 <button id="toc-toggle">☰ Sections</button>
 
 <div id="toc-panel">
@@ -22,7 +26,7 @@ order: 4
     <li><a href="#operating-systems">Operating Systems</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
-</div>
+</div> -->
 
 # Programming
 

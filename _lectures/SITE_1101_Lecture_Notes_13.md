@@ -1,15 +1,18 @@
 ---
 layout: page
-title: Week 13 — Systems Development Life Cycle
+title: Systems Development Life Cycle
 order: 9
+week: 13
+authors: "Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev"
+created: "Dec 15 2025"
+updated: "Dec 24 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Authors:** Rahida Asadli, Ismayil Shahaliyev, Rumiyya Alili
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Dec 15 2025 **/** Dec 24 2025
-{% include reading-time.html %}
+<!-- {% include reading-time.html %}
 
 <button id="toc-toggle">☰ Sections</button>
 
@@ -24,7 +27,7 @@ order: 9
     <li><a href="#jad">Joint Application Development (JAD)</a></li>
     <li><a href="#additional-materials">Additional Materials</a></li>
   </ul>
-</div>
+</div> -->
 
 [Systems Development Life Cycle (SDLC)](https://en.wikipedia.org/wiki/Systems_development_life_cycle) is a framework that guides the creation of an information system from initial idea to a working product. It describes the process of identifying system requirements, designing the system, building it, and deploying it to users.
 

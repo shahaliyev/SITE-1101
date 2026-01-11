@@ -25,10 +25,10 @@
         <div class="dropdown">
           <a href="#" class="page-link dropbtn">Projects <span style="font-size: 10px;">&#9660;</span></a>
           <div class="dropdown-content">
-            <a href="{{ '/projects/1/' | relative_url }}">Project 1</a>
-            <a href="{{ '/projects/2/' | relative_url }}">Project 2</a>
-            <a href="{{ '/projects/3/' | relative_url }}">Project 3</a>
-            <a href="{{ '/projects/4/' | relative_url }}">Project 4</a>
+            {% assign projects = site.projects | sort: "title" %}
+            {% for project in projects %}
+            <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+            {% endfor %}
           </div>
         </div>
 

@@ -1,16 +1,19 @@
 ---
 layout: page
-title: Week 11 — Databases & Database Management Systems
+title: Databases & Database Management Systems
 order: 7
+week: 11
+authors: "Rahida Asadli, Rumiyya Alili, Ismayil Shahaliyev"
+created: "Dec 1 2025"
+updated: "Dec 22 2025"
 ---
+
 {% include lecture-styles.html %}
 
+{% include lecture-header-info.html %}
 
-**Authors:** Rahida Asadli, Ismayil Shahaliyev, Rumiyya Alili
+<!-- {% include reading-time.html %}
 
-**Created / Updated:** Dec 1 2025 **/** Dec 22 2025
-
-{% include reading-time.html %}
 <button id="toc-toggle">☰ Sections</button>
 
 <div id="toc-panel" class="toc-panel" style="display:none;"> <ul>
@@ -25,7 +28,7 @@ order: 7
     <li><a href="#cap-theorem">CAP Theorem</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
-</div>
+</div> -->
 
 
 In the past, many systems stored information in simple text files. For example, a file named students.txt could have lines like:

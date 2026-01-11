@@ -1,17 +1,18 @@
 ---
 layout: page
-title: Week 04 — Hardware, CPU, Input/Processing/Output/Storage Devices
+title: Hardware – CPU, GPU, Memory, Storage Devices
 order: 2
+week: 4
+authors: "Rahida Asadli, Ismayil Shahaliyev"
+created: "Oct 25 2025"
+updated: "Dec 20 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Oct 25 2025 **/** Nov 10 2025
-
-
-<button id="toc-toggle">☰ Sections</button>
+<!-- <button id="toc-toggle">☰ Sections</button>
 
 <div id="toc-panel">
   <h4>On this page</h4>
@@ -24,9 +25,9 @@ order: 2
     <li><a href="#storage-hierarchy">Storage Hierarchy</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
-</div>
+</div> -->
 
-{% include reading-time.html %}
+
 
 ### Hardware
 

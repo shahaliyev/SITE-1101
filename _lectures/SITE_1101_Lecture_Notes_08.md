@@ -1,15 +1,18 @@
 ---
 layout: page
-title: Week 08 — Telecommunications & Computer Network
+title: Telecommunications & Computer Network
 order: 5
+week: 8
+authors: "Rahida Asadli, Ismayil Shahaliyev"
+created: "Nov 23 2025"
+updated: "Dec 21 2025"
 ---
+
 {% include lecture-styles.html %}
 
-**Authors:** Rahida Asadli, Ismayil Shahaliyev
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Nov 23 2025 **/** Dec 21 2025
-
-{% include reading-time.html %}
+<!-- {% include reading-time.html %}
 
 <button id="toc-toggle">☰ Sections</button>
 
@@ -19,7 +22,7 @@ order: 5
     <li><a href="#network-topologies">Network Topologies</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
-</div>
+</div> -->
 
 ## Telecommunications
 

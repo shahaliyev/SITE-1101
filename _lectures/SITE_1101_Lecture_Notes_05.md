@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Week 05 — Algorithm & Algorithmic Actions
+title: Algorithm & Algorithmic Actions
 order: 3
+week: 5
+authors: "Nilufar Ismayilova, Ismayil Shahaliyev"
+created: "Oct 25 2025"
+updated: "Dec 22 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Authors:** Nilufar Ismayilova, Ismayil Shahaliyev
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Oct 25 2025 **/** Dec 22 2025
-
-{% include reading-time.html %}
-
-
+<!-- 
 <button id="toc-toggle">☰ Sections</button>
 
 <div id="toc-panel">
@@ -22,7 +22,7 @@ order: 3
      <li><a href="#dijkstra-shortest-path">Dijkstra's Shortest Path Algorithm</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
-</div>
+</div> -->
 
 An [algorithm](https://en.wikipedia.org/wiki/Algorithm) is a step-by-step procedure or set of rules to solve a specific problem or perform a task. It is like a recipe in cooking: you follow a clear sequence of actions to achieve a specific result. In computer science, algorithms receive some _input_, _process_ it in a logical way, and produce an _output_. What makes a **good algorithm** is that it has a clear starting point, a clear ending point, and every step is unambiguous - there is no confusion about how it should be executed.
 

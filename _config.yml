@@ -16,6 +16,9 @@ collections:
   lectures:
     output: true
     permalink: /lectures/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
 
 plugins:
   - jekyll-feed

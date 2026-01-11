@@ -1,15 +1,16 @@
 ---
 layout: page
-title: Week 01 & 02 — Engineering, Technology, and System
+title: System, Engineering, Technology
 order: 0
+week: [1, 2]
+authors: "Rahida Asadli, Ismayil Shahaliyev"
+created: "Oct 10 2025"
+updated: "Dec 18 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov, Ismayil Shahaliyev
-
-**Created / Updated:** Oct 10 2025 **/** Dec 18 2025
-{% include reading-time.html %}
+{% include lecture-header-info.html %}
 
 [Cybernetics](https://en.wikipedia.org/wiki/Cybernetics) is the study of control, communication, and feedback in systems, a field developed by [Norbert Wiener](https://en.wikipedia.org/wiki/Norbert_Wiener). During WWII, Weiner worked on predicting the future position of enemy aircraft: he realized that both the gun and the pilot form a feedback system are constantly correcting actions based on error and delay rather than following a fixed plan. This insight led him to extend control theory beyond machines to living systems, emphasizing self-regulation and adaptation under uncertainty. This way of thinking later influenced [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) and [deep learning](https://en.wikipedia.org/wiki/Deep_learning), where feedback from errors is used to adjust internal _parameters_ and improve performance.
 

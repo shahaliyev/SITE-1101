@@ -1,16 +1,18 @@
 ---
 layout: page
-title: Week 14 — Ethics, Security, and Logical Reasoning
+title: Ethics, Security, and Logical Reasoning
 order: 10
+week: 14
+authors: "Nilufar Ismayilova, Rumiyya Alili, Ismayil Shahaliyev"
+created: "Nov 29 2025"
+updated: "Dec 25 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Authors:** Nilufar Ismayilova, Ismayil Shahaliyev, Rumiyya Alili
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Nov 29 2025 **/** Dec 25 2025
-
-{% include reading-time.html %}
+<!-- {% include reading-time.html %}
 
 <button id="toc-toggle">☰ Sections</button>
 
@@ -24,7 +26,7 @@ order: 10
     <li><a href="#acm-code-of-ethics">ACM Code of Ethics</a></li>
     <li><a href="#additional-materials">Additional Materials</a></li>
   </ul>
-</div>
+</div> -->
 
 _The most dangerous phrase in the language is: "We've always done it this way"._
 

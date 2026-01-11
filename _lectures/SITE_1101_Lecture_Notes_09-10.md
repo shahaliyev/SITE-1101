@@ -1,16 +1,18 @@
 ---
 layout: page
-title: Week 09-10 — The Internet and the World Wide Web
+title: The Internet and the World Wide Web
 order: 6
+week: [9, 10]
+authors: "Nilufar Ismayilova,  Rumiyya Alili, Ismayil Shahaliyev"
+created: "Nov 21 2025"
+updated: "Dec 23 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Authors:** Nilufar Ismayilova, Ismayil Shahaliyev, Rumiyya Alili
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Nov 21 2025 / Dec 23 2025
-
-{% include reading-time.html %}
+<!-- {% include reading-time.html %}
 
 <button id="toc-toggle">☰ Sections</button>
 
@@ -29,7 +31,7 @@ order: 6
     <li><a href="#centralized">Centralized, Decentralized, Distributed Systems</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
-</div>
+</div> -->
 
 ### The Internet
 

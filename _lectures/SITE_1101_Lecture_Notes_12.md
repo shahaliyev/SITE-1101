@@ -1,16 +1,18 @@
 ---
 layout: page
-title: Week 12 — Artificial Intelligence, Machine Learning, Deep Learning
+title: Artificial Intelligence, Machine Learning, Deep Learning
 order: 8
+week: 12
+authors: "Nilufar Ismayilova, Rumiyya Alili, Ismayil Shahaliyev"
+created: "Nov 29 2025"
+updated: "Dec 23 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Authors:** Nilufar Ismayilova, Ismayil Shahaliyev, Rumiyya Alili
+{% include lecture-header-info.html %}
 
-**Created / Updated:** Nov 29 2025 **/** Dec 23 2025
-
-{% include reading-time.html %}
+<!-- {% include reading-time.html %}
 
 <button id="toc-toggle">☰ Sections</button>
 
@@ -26,7 +28,7 @@ order: 8
     <li><a href="#reinforcement-learning">Reinforcement Learning (RL)</a></li>
     <li><a href="#additional-materials">Additional Materials</a></li>
   </ul>
-</div>
+</div> -->
 
 ### Purpose of AI, Machine Learning and Deep Learning
 

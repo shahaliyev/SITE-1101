@@ -1,23 +1,19 @@
 ---
 layout: page
-title: Week 03 — Von Neumann Architecture, Binary Representation, Arithmetic & Logic Operations
+title: Binary Representation, Arithmetic & Logic Operations
 order: 1
+week: 3
+authors: "Nilufar Ismayilova, Ismayil Shahaliyev"
+created: "Oct 23 2025"
+updated: "Dec 19 2025"
 ---
 
 {% include lecture-styles.html %}
 
-**Week 03**
+{% include lecture-header-info.html %}
 
-**Authors:** Rahida Asadli, Nilufar Ismayilova, Rahman Karimov, Ismayil Shahaliyev
-
-**Created / Updated:** Oct 23 2025 **/** Oct 23 2025
-
-{% include reading-time.html %}
-
-
-<button id="toc-toggle">☰ Sections</button>
-
-<div id="toc-panel">
+<!-- <button id="toc-toggle">☰ Sections</button> -->
+<!-- <div id="toc-panel">
   <h4>On this page</h4>
   <ul>
     <li><a href="#digital-vs-analog">Digital vs Analog</a></li>
@@ -28,7 +24,8 @@ order: 1
     <li><a href="#boolean-logic">Boolean Logic</a></li>
     <li><a href="#additional-material">Additional Material</a></li>
   </ul>
-</div>
+</div> -->
+
 # Digital vs Analog
 
 _Discrete_ means values change in separate, well-defined steps with no possible values in between. A standard light switch is a simple example: it is either on or off - there's nothing between those two states. Likewise, a digital clock that shows 14:35 jumps straight to 14:36 with no "in-between" time displayed.
