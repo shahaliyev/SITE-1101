@@ -32,12 +32,11 @@ permalink: /
 
 # 🎓 SITE 1101: Principles of Information Systems
 
-The course provides a general overview of what SITE students of the [ADA University](https://www.ada.edu.az/en/about/ada-university) will study throughout their bachelor’s program. It introduces the fundamentals of information technology and computer-based systems, including hardware, software, network, database, artificial intelligence, system analysis and design, programming, etc. The course was originally developed by [Dr. Araz Yusubov](https://www.ada.edu.az/en/schools/site/members/faculty/58-araz-yusubov) and [Nuraddin Sadili](https://www.ada.edu.az/en/schools/site/members/faculty/76-nuraddin-sadili). 
+The course provides a general overview of what SITE students of the [ADA University](https://www.ada.edu.az/en/about/ada-university) will study throughout their bachelor’s program. It introduces the fundamentals of information technology and computer-based systems, including hardware, software, network, database, artificial intelligence, system analysis and design, programming, etc. The course was originally developed by [Araz Yusubov](https://www.ada.edu.az/en/schools/site/members/faculty/58-araz-yusubov) and [Nuraddin Sadili](https://www.ada.edu.az/en/schools/site/members/faculty/76-nuraddin-sadili). 
 
-## Instructors & Teaching Assistants (Fall 2025)
+## Fall 2025
 
-**Instuctors** | [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev) | [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili)
-**Teaching Assistants** | [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) | [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2) | [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b)
+This website is launched at the end of the Fall 2025 semester with the efforts of our great Teaching Assistants [Nilufar Ismayilova](https://www.linkedin.com/in/nilufar-ismayilova-24b7523a2), [Rahida Asadli](https://www.linkedin.com/in/rahidaasadli) (see [Lecture Notes](/lectures)), and [Rahman Karimov](https://www.linkedin.com/in/rahman-karimov-22444b25b) (Website), as well as the guidance of the course instructors [Rumiyya Alili](https://www.linkedin.com/in/rumiyya-alili) and [Ismayil Shahaliyev](https://www.ada.edu.az/en/schools/site/members/faculty/72-ismayil-shahaliyev).
 
 ## Schedule
 
@@ -122,7 +121,7 @@ Students are encouraged to consult with the Writing Center for checking their pa
 
 
 ### Footnotes
-[^1]: In case of difficulties in communication, you are encouraged to consult your academic advisor and seek psychological support. See Policies & Resources section.
+[^1]: In case of difficulties in communication, you are encouraged to consult your academic advisor and seek psychological support.
 
 [^2]: You are expected to be aware of the [Exam Rules and Regulations](https://www.ada.edu.az/file_upload/policies/stud_as_reg.pdf). If you have special needs or health  issues, you are strongly recommended to contact the University’s Student Academic Support Services well ahead of the examination date. It is your responsibility to manage conflicts in your schedule and notify your instructors about it at least two weeks before the examination date.
 
